@@ -4,7 +4,9 @@
 結果：too_many_active_automations / current_count15 / plan_limit15。
 既存の定期タスクは停止・変更していない。
 
-候補のスケジュール：Asia/Tokyoの朝・午後・夜（8時・14時・20時頃）。この頻度は初期運用案であり、登録済みではない。
+再試行も too_many_active_automations（15/15）で失敗。既存タスクを停止・変更していない。
+
+現在の候補スケジュール：Asia/Tokyoの朝・夜（8時・19時頃）の2回。これは運用案であり、登録済みではない。正式な編集・公開手順は `ops/AUTOMATION.md`、登録用プロンプトは `ops/EDITORIAL_TASK.txt`。枠の確保または既存タスクへの統合を本人が選択してから登録する。
 
 ## 実行内容
 

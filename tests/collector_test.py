@@ -20,4 +20,12 @@ class RadarTests(unittest.TestCase):
   grade,why=c.rank('全線運休のお知らせ');self.assertEqual(grade,'S');self.assertIn('確認',why)
  def test_atom(self):
   s={**self.source,'kind':'rss'};body=b'<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>New train service announced</title><link href="https://www.jreast.co.jp/press/2026/notice.html"/></entry></feed>';self.assertEqual(len(c.parse_source(body,s)),1)
+ def test_repeated_alt_text_and_listing_date_remain_unverified(self):
+  self.assertEqual(c.plain('新型車両がデビュー 新型車両がデビュー'),'新型車両がデビュー')
+  self.assertEqual(c.plain('ショップ ショップ ショップ'),'ショップ')
+  self.assertEqual(c.listing_date_hint('2026/10/23 列車のお知らせ'),'2026-10-23')
+  self.assertIsNone(c.listing_date_hint('2027年3月1日 新型車両デビュー'))
+  self.assertIsNone(c.listing_date_hint('2026/99/99 お知らせ'))
+ def test_cancelled_service_requires_review(self):
+  grade,why=c.rank('10月23日 列車の運休について');self.assertEqual(grade,'S');self.assertIn('確認',why)
 if __name__=='__main__':unittest.main()

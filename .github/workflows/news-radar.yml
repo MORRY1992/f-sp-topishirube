@@ -1,5 +1,12 @@
 name: Official news radar
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/news-radar.yml'
+      - 'scripts/collect.py'
+      - 'scripts/editorial_queue.py'
+      - 'content/sources.json'
   workflow_dispatch:
   schedule:
     - cron: '17 */3 * * *'
@@ -28,6 +35,8 @@ jobs:
           result=$?
           set -e
           echo "RADAR_RESULT=$result" >> "$GITHUB_ENV"
+      - name: Prepare editing worklist and explicit source health
+        run: python scripts/editorial_queue.py --queue "$RUNNER_TEMP/queue.json" --output "$RUNNER_TEMP/editorial.json"
       - name: Save bounded queue on isolated data branch
         shell: bash
         run: |
@@ -39,7 +48,8 @@ jobs:
             git switch --orphan data
           fi
           cp "$RUNNER_TEMP/queue.json" queue.json
-          git add queue.json
+          cp "$RUNNER_TEMP/editorial.json" editorial.json
+          git add queue.json editorial.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update official news candidates (not articles)'
             git push origin HEAD:data
@@ -48,4 +58,5 @@ jobs:
         shell: bash
         run: |
           python -c 'import json,os; q=json.load(open("queue.json")); f=open(os.environ["GITHUB_STEP_SUMMARY"],"a"); f.write("## Official radar\nCandidates are unverified; no articles published.\n\n"+"\n".join("- "+s["sourceId"]+": "+str(s["status"])+" / "+str(s.get("candidateCount","unknown")) for s in q["sources"]))'
+          python -c 'import json,os; q=json.load(open("editorial.json")); f=open(os.environ["GITHUB_STEP_SUMMARY"],"a"); f.write("\n\nHealth: "+q["health"]["status"]+"\nEditing counts: "+json.dumps(q["counts"])+"\nPartial failures are NOT no-news results.\n")'
           test "$RADAR_RESULT" = 0
