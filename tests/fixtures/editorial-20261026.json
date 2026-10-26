@@ -1,0 +1,306 @@
+{
+  "sourceMain": "c7c2662b25c6cc52892fdc60e782680eb82caa17",
+  "sourceData": "84b29a4631be51c35caa900272b7401d2f172bd0",
+  "comparisonAt": "2026-10-26T09:54:02+00:00",
+  "queue": {
+    "version": 1,
+    "collectedAt": "2026-10-26T09:53:53+00:00",
+    "notice": "候補は未検証。公開記事ではありません。重要度は見出しによる仮判定です。",
+    "sources": [
+      {
+        "sourceId": "jr-east",
+        "url": "https://www.jreast.co.jp/press/",
+        "checkedAt": "2026-10-26T09:53:53+00:00",
+        "status": "failed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      },
+      {
+        "sourceId": "sagano",
+        "url": "https://www.sagano-kanko.co.jp/",
+        "checkedAt": "2026-10-26T09:53:53+00:00",
+        "status": 200,
+        "candidateCount": 5,
+        "parserWarning": null
+      }
+    ],
+    "sourceMonitors": [
+      {
+        "url": "https://www.jreast.co.jp/card/news/pdf/20261026.pdf",
+        "checkedAt": "2026-10-26T09:53:53+00:00",
+        "status": "failed",
+        "sha256": null,
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "changed": null
+      },
+      {
+        "url": "https://www.sagano-kanko.co.jp/cms/wp-content/uploads/2026/10/261023_1000_%E3%83%97%E3%83%AC%E3%82%B9%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9.pdf",
+        "checkedAt": "2026-10-26T09:53:53+00:00",
+        "status": 200,
+        "sha256": "45223d44881f791cc438bb6a39f1106cfa4618b2cbee95d3f3621b76c8c4d3f5",
+        "changed": false,
+        "previousSha256": "45223d44881f791cc438bb6a39f1106cfa4618b2cbee95d3f3621b76c8c4d3f5",
+        "action": "editorial-review-only"
+      },
+      {
+        "url": "https://www.jreast.co.jp/press/2026/20261022_ho.pdf",
+        "checkedAt": "2026-10-26T09:53:53+00:00",
+        "status": "failed",
+        "sha256": null,
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "changed": null
+      },
+      {
+        "url": "https://www.jreast.co.jp/press/2026/winterextratrain/",
+        "checkedAt": "2026-10-26T09:53:53+00:00",
+        "status": "failed",
+        "sha256": null,
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "changed": null
+      }
+    ],
+    "candidates": [
+      {
+        "id": "498916f3cbf396d2c783",
+        "title": "2026/10/23 10月23日(金) 列車の運休について",
+        "url": "https://www.sagano-kanko.co.jp/news/5590/",
+        "sourceId": "sagano",
+        "sourceName": "嵯峨野観光鉄道 公式お知らせ",
+        "category": "鉄道・旅行",
+        "sourcePublishedAt": null,
+        "firstSeenAt": "2026-10-26T09:05:07+00:00",
+        "lastSeenAt": "2026-10-26T09:53:53+00:00",
+        "priority": "S",
+        "priorityReason": "緊急・重大の可能性を示す語を検出。公式本文の確認が必要",
+        "status": "candidate",
+        "bodyVerified": false,
+        "autoPublish": false,
+        "sourceListedDate": "2026-10-23"
+      },
+      {
+        "id": "10221c302287e8df83b4",
+        "title": "2026/10/23 【プレスリリース】新たなトロッコ列車 運行開始日の決定等の詳細について",
+        "url": "https://www.sagano-kanko.co.jp/news/5535/",
+        "sourceId": "sagano",
+        "sourceName": "嵯峨野観光鉄道 公式お知らせ",
+        "category": "鉄道・旅行",
+        "sourcePublishedAt": null,
+        "firstSeenAt": "2026-10-26T09:05:07+00:00",
+        "lastSeenAt": "2026-10-26T09:53:53+00:00",
+        "priority": "A",
+        "priorityReason": "予定・予約・利用条件に関わる語を検出",
+        "status": "candidate",
+        "bodyVerified": false,
+        "autoPublish": false,
+        "sourceListedDate": "2026-10-23"
+      },
+      {
+        "id": "49a5686c74d0c4d615e2",
+        "title": "2026/10/02 【プレスリリース】秋の京都西エリアを彩る嵯峨野トロッコと仁和寺の地域連携 〜秋限定セット券の発売、僧侶によるオリジナル御朱印の授与会の開催〜",
+        "url": "https://www.sagano-kanko.co.jp/news/5304/",
+        "sourceId": "sagano",
+        "sourceName": "嵯峨野観光鉄道 公式お知らせ",
+        "category": "鉄道・旅行",
+        "sourcePublishedAt": null,
+        "firstSeenAt": "2026-10-26T09:05:07+00:00",
+        "lastSeenAt": "2026-10-26T09:53:53+00:00",
+        "priority": "A",
+        "priorityReason": "予定・予約・利用条件に関わる語を検出",
+        "status": "candidate",
+        "bodyVerified": false,
+        "autoPublish": false,
+        "sourceListedDate": "2026-10-02"
+      },
+      {
+        "id": "40ef82383e2916000386",
+        "title": "2026/10/23 10月24日(土)の運転について",
+        "url": "https://www.sagano-kanko.co.jp/news/5599/",
+        "sourceId": "sagano",
+        "sourceName": "嵯峨野観光鉄道 公式お知らせ",
+        "category": "鉄道・旅行",
+        "sourcePublishedAt": null,
+        "firstSeenAt": "2026-10-26T09:05:07+00:00",
+        "lastSeenAt": "2026-10-26T09:53:53+00:00",
+        "priority": "B",
+        "priorityReason": "利用者向けの変更・イベント候補",
+        "status": "candidate",
+        "bodyVerified": false,
+        "autoPublish": false,
+        "sourceListedDate": "2026-10-23"
+      },
+      {
+        "id": "622535ad4f9eb4179a86",
+        "title": "2026/10/19 【プレスリリース】本物のEF66機関車の運転台でHOゲージ車両ジオラマ運転体験 ～ジオラマ京都JAPANの巨大ジオラマで運転士気分が味わえる～",
+        "url": "https://www.sagano-kanko.co.jp/news/5461/",
+        "sourceId": "sagano",
+        "sourceName": "嵯峨野観光鉄道 公式お知らせ",
+        "category": "鉄道・旅行",
+        "sourcePublishedAt": null,
+        "firstSeenAt": "2026-10-26T09:05:07+00:00",
+        "lastSeenAt": "2026-10-26T09:53:53+00:00",
+        "priority": "B",
+        "priorityReason": "利用者向けの変更・イベント候補",
+        "status": "candidate",
+        "bodyVerified": false,
+        "autoPublish": false,
+        "sourceListedDate": "2026-10-19"
+      }
+    ],
+    "runs": [
+      {
+        "at": "2026-10-26T09:05:07+00:00",
+        "sourcesOk": 1,
+        "sourcesTotal": 2,
+        "newlySeen": 13
+      },
+      {
+        "at": "2026-10-26T09:12:37+00:00",
+        "sourcesOk": 1,
+        "sourcesTotal": 2,
+        "newlySeen": 0
+      },
+      {
+        "at": "2026-10-26T09:19:18+00:00",
+        "sourcesOk": 1,
+        "sourcesTotal": 2,
+        "newlySeen": 0
+      },
+      {
+        "at": "2026-10-26T09:53:53+00:00",
+        "sourcesOk": 1,
+        "sourcesTotal": 2,
+        "newlySeen": 0
+      }
+    ]
+  },
+  "articles": [
+    {
+      "id": "suica-charge-202611",
+      "title": "Suicaチャージの新キャンペーン。エントリー日と利用開始日を分けて確認",
+      "summary": "応募は10月26日から、対象の利用は11月4日から。2コースの条件を、いつもの支出で確認するためのメモ。",
+      "announcedAt": "2026-10-26",
+      "sources": [
+        {
+          "name": "JR東日本・ビューカード 公式発表（PDF・全3ページ）",
+          "url": "https://www.jreast.co.jp/card/news/pdf/20261026.pdf",
+          "checkedAt": "2026-10-26T17:45:00+09:00",
+          "locator": "1〜3ページ"
+        }
+      ],
+      "points": [
+        "エントリーと対象利用の開始日は異なる",
+        "オートチャージと買いものの2コース",
+        "最大ポイントは抽選。全員付与の条件と区別"
+      ],
+      "sections": [
+        {
+          "title": "何が発表された？",
+          "kind": "fact",
+          "html": "<p>JR東日本とビューカードは、2026年11月4日〜2027年1月31日のSuicaチャージ関連キャンペーンを発表しました。エントリーは10月26日から可能です。対象期間前の利用を、今回の実績に含めないよう注意が必要です。</p>"
+        },
+        {
+          "title": "2つのコースを確認",
+          "kind": "fact",
+          "html": "<div class=table-scroll><table><thead><tr><th>コース</th><th>主な条件</th><th>特典</th></tr></thead><tbody><tr><td>オートチャージ</td><td>2025年11月1日〜2026年10月31日に利用がなく、対象期間に1回1万円のオートチャージを3回以上。エントリーと対象カードのJRE POINT登録も必要</td><td>条件達成で1,000ポイント。モバイルSuicaなら追加500ポイント</td></tr><tr><td>チャージ＆買いもの</td><td>対象期間にビューカードから累計3万円以上チャージし、登録済みSuicaで累計1万円（税込）以上買いもの。エントリー・登録情報の一致も必要</td><td>抽選。最大10万ポイントは1等10名</td></tr></tbody></table></div><p>条件の判定はVIEW's NET会員単位です。複数カード等で達成しても特典は1人1回。ポイント付与は2027年3月中旬以降の予定です。詳細な対象・除外条件は公式資料を確認してください。</p>"
+        },
+        {
+          "title": "使う前に、この順番で",
+          "kind": "guide",
+          "html": "<ol><li>自分の過去のオートチャージ利用履歴を確認する。</li><li>応募画面とJRE POINTの登録状況を確認する。</li><li>11月4日以降の普段の支出で条件を満たすか考える。</li><li>条件・エントリー完了画面を自分用に残す。</li></ol><p>ポイントを得るために予定のない支出を増やすと、家計の節約にはつながりません。チャージ残高は現金同様に自由な用途へ戻せる前提で考えず、使い切れる範囲を先に決めるのが実用的です。</p>"
+        },
+        {
+          "title": "現時点での注意点",
+          "kind": "guide",
+          "html": "<p>公式発表では特設サイトは10月30日公開予定です。初回確認時点では特設サイト本文を取得できていません。応募先や細かな条件は、下の公式発表に記載された正規の案内から確認してください。記事はカード入会の勧誘・申込代行を行いません。</p>"
+        }
+      ]
+    },
+    {
+      "id": "sagano-new-train-202703",
+      "title": "嵯峨野トロッコ新型、2027年3月1日へ。初日の予約時刻と料金を整理",
+      "summary": "大きな窓だけでなく、予約と料金もチェック。初日分は通常の発売ルールと異なります。",
+      "announcedAt": "2026-10-23",
+      "sources": [
+        {
+          "name": "嵯峨野観光鉄道 2026年10月23日公式発表（PDF）",
+          "url": "https://www.sagano-kanko.co.jp/cms/wp-content/uploads/2026/10/261023_1000_%E3%83%97%E3%83%AC%E3%82%B9%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9.pdf",
+          "checkedAt": "2026-10-26T17:45:00+09:00",
+          "locator": "1〜3ページ"
+        }
+      ],
+      "points": [
+        "2027年3月1日、嵯峨野3号から運転予定",
+        "初日分は2月1日午前10時頃に発売",
+        "一般席のおとな1人は運賃＋指定料金で1,500円"
+      ],
+      "sections": [
+        {
+          "title": "旅行予定に関わる変更点",
+          "kind": "fact",
+          "html": "<p>嵯峨野観光鉄道は、新型トロッコ列車を2027年3月1日の嵯峨野3号（トロッコ嵯峨10時02分発）から運転すると発表しました。全客車にガラスの高天井を採用し、側面の窓も足元まで広がります。</p><p>現行車両は2026年12月29日の営業運転で引退予定です。現行車両に乗りたい旅行と、新型に乗りたい旅行では日程を分けて考える必要があります。</p>"
+        },
+        {
+          "title": "予約は初日だけ例外",
+          "kind": "fact",
+          "html": "<p>通常は乗車30日前の午前0時から公式サイトで購入できますが、3月1日乗車分は<strong>2027年2月1日の午前10時頃</strong>から発売予定です。駅窓口の事前販売はありません。当日券はトロッコ保津峡駅を除く各駅窓口で販売予定ですが、満席の場合は乗れません。</p>"
+        },
+        {
+          "title": "料金は足し算で確認",
+          "kind": "guide",
+          "html": "<div class=table-scroll><table><thead><tr><th>利用</th><th>公表料金</th><th>計算例</th></tr></thead><tbody><tr><td>一般席・おとな1人</td><td>運賃880円＋指定料金620円</td><td>片道1,500円</td></tr><tr><td>一般席・こども1人</td><td>運賃440円＋指定料金310円</td><td>片道750円</td></tr><tr><td>特別室「嵐峡」</td><td>1室9,000円＋人数分の運賃</td><td>おとな6人なら14,280円</td></tr></tbody></table></div><p>計算例は公表された各料金の単純合算です。往復や他の交通手段の費用は含みません。特別室はトロッコ嵯峨駅またはトロッコ亀岡駅から利用する案内です。デッキは運賃のみで利用可能とされていますが、一般席の座席確保とは区別してください。</p>"
+        },
+        {
+          "title": "予約前に残しておくメモ",
+          "kind": "guide",
+          "html": "<p>乗車日、往路と復路の駅、一般席か特別室か、人数を先に決めておくと、発売当日に確認をやり直す手間が減ります。初日は運転開始列車が通常日と異なるため、朝の乗り継ぎを普段のダイヤだけで組まないようにしましょう。</p><p>車内の開放感は魅力ですが、生成イラストから座席配置や実際の景色を判断しないでください。実物の設備図・運行日・変更情報は公式案内で確認してください。</p>"
+        }
+      ]
+    },
+    {
+      "id": "jr-east-winter-2026",
+      "title": "JR東日本、冬の臨時列車を発表。帰省・スキーの計画前に見る3項目",
+      "summary": "対象は12月1日〜翌2月28日。運転本数の合計と、自分の乗車日の運行は分けて確認。",
+      "announcedAt": "2026-10-22",
+      "sources": [
+        {
+          "name": "JR東日本 冬の臨時列車の運転について（公式PDF）",
+          "url": "https://www.jreast.co.jp/press/2026/20261022_ho.pdf",
+          "checkedAt": "2026-10-26T17:45:00+09:00",
+          "locator": "1〜3ページ"
+        },
+        {
+          "name": "JR東日本 公式案内ページ",
+          "url": "https://www.jreast.co.jp/press/2026/winterextratrain/",
+          "checkedAt": "2026-10-26T17:45:00+09:00",
+          "locator": "本文"
+        }
+      ],
+      "points": [
+        "対象期間は2026年12月1日〜2027年2月28日",
+        "公表本数は期間合計。毎日の本数ではない",
+        "運転日・行先・帰りの列車をそれぞれ確認"
+      ],
+      "sections": [
+        {
+          "title": "今回の発表の範囲",
+          "kind": "fact",
+          "html": "<p>JR東日本は、2026年12月1日〜2027年2月28日の90日間に運転する冬の臨時列車を発表しました。新幹線3,645本、在来線特急2,486本、快速751本で、計6,882本としています。これは期間全体の計画で、1日あたりの増発本数ではありません。</p><p>公表本数は事業者の集計方法によります。これだけで全列車の座席数や混雑の減少率を計算することはできません。需要に応じた追加運転の可能性も案内されています。</p>"
+        },
+        {
+          "title": "スキー旅行は営業開始と滑走開始を区別",
+          "kind": "fact",
+          "html": "<p>資料ではGALA湯沢の営業開始を12月12日、ゲレンデオープンを12月19日と案内しています。施設の営業開始日と、滑るためのゲレンデオープン日は同じではありません。たにがわの延長・臨時運転も案内されています。</p>"
+        },
+        {
+          "title": "計画前の3項目",
+          "kind": "guide",
+          "html": "<ol><li><strong>自分の日付で運転するか。</strong>列車名が載っていても、期間中毎日運転とは限りません。日付を一つずつ照合します。</li><li><strong>行先と停車駅が合うか。</strong>同じ列車名でも、号数により目的地や乗り換え方が異なる場合があります。</li><li><strong>帰りも確保できるか。</strong>行きだけで宿泊を決めず、帰路の運転日と接続を同時に確認します。</li></ol><p>宿泊施設や体験予約の取り消し条件も先に確認しておくと、交通計画が変わったときに判断しやすくなります。臨時列車があることと、希望する席が予約できることは別です。</p>"
+        },
+        {
+          "title": "時刻表への反映も確認",
+          "kind": "guide",
+          "html": "<p>初回発表時点で、すべての検索サービスに同じタイミングで反映されるとは限りません。検索結果が見つからないだけで運休と判断せず、まず公式発表の運転日を照合してください。予約の発売日や空席、直前の運行状況はこの記事では確認していません。</p>"
+        }
+      ]
+    }
+  ]
+}
