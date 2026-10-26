@@ -29,6 +29,7 @@ python scripts/check_links.py
 
 - GitHub Actions `Official news radar`：3時間ごと、標準ubuntu-latest、公開リポジトリのみ。
 - `data` ブランチ `queue.json`：見出し候補・URL・取得日時・仮SABCD判定・公式資料変更監視。公開ページに流用しない。
+- `data` ブランチ `editorial.json`：鮮度・取得障害・既存出典の重複・変更を整理した編集用リスト。6時間超や失敗元の候補は直接再確認まで保留。記事は自動生成しない。
 - `main` は検証済み記事だけ。収集だけのコミットはmainを更新しないのでPagesビルドを消費しない。
 - 最大8取得元、各100候補、キュー500件、監視元8件、各6MB・25秒まで。
 - 失敗は取得不能として記録。取得不能をニュースなしと表示しない。
@@ -40,4 +41,4 @@ python scripts/check_links.py
 
 商標類似調査、Cloudflare本番接続、非公開問い合わせ窓口、Search Console、実アクセス計測、AdSense登録・申請、長期間の自動更新耐久試験は未完了。GitHub公開窓口は設置済みだが私的情報の受付には使わない。初期3記事だけで広告申請準備完了とは扱わない。
 
-詳細：`ops/OPERATIONS.md` / `ops/REVIEW_20261026.md`
+詳細：`ops/OPERATIONS.md` / `ops/AUTOMATION.md` / `ops/REVIEW_20261026.md`

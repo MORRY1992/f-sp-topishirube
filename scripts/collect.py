@@ -20,10 +20,20 @@ def canonical(url):
     return urlunsplit((p.scheme,p.netloc.lower(),p.path or '/',query,''))
 
 def plain(text):
-    value=re.sub(r'\s+',' ',html.unescape(re.sub('<[^>]*>','',text))).strip()[:240]
-    repeated=re.fullmatch(r'(.{4,}?) \1(?: \1)?',value)
-    return repeated.group(1) if repeated else value
+    text=re.sub(r'\s+',' ',html.unescape(re.sub('<[^>]*>','',text))).strip()
+    # Some listings repeat the same headline in image alt text and link text.
+    for copies in (3,2):
+        size=(len(text)-(copies-1))//copies
+        if size>0 and ' '.join([text[:size]]*copies)==text:
+            text=text[:size]
+    return text[:240]
 
+def listing_date_hint(title):
+    # A listing prefix is a hint only, never a verified announcement date.
+    m=re.match(r'^(\d{4})/(\d{1,2})/(\d{1,2})(?:\s|$)',title)
+    if not m:return None
+    try:return dt.date(*map(int,m.groups())).isoformat()
+    except ValueError:return None
 class Links(HTMLParser):
     def __init__(self):super().__init__(convert_charrefs=True);self.links=[];self.href=None;self.parts=[]
     def handle_starttag(self,tag,attrs):
@@ -57,7 +67,7 @@ def parse_source(body,source):
         p=urlsplit(url)
         if p.hostname not in source.get('allowedLinkHosts',[source['host']]) or not any(re.search(pattern,p.path) for pattern in source['pathPatterns']):continue
         if url in seen:continue
-        seen.add(url);result.append({'id':hashlib.sha256(url.encode()).hexdigest()[:20],'title':title,'url':url,'sourceId':source['id'],'sourceName':source['name'],'category':source['category'],'sourcePublishedAt':None,'sourceListedDate':(re.match(r'^(20[0-9]{2})/([0-9]{2})/([0-9]{2})',title).group(0).replace('/','-') if re.match(r'^(20[0-9]{2})/([0-9]{2})/([0-9]{2})',title) else None)})
+        seen.add(url);result.append({'id':hashlib.sha256(url.encode()).hexdigest()[:20],'title':title,'url':url,'sourceId':source['id'],'sourceName':source['name'],'category':source['category'],'sourcePublishedAt':None,'sourceListedDate':listing_date_hint(title)})
     return result[:100]
 
 def rank(title):
