@@ -48,3 +48,12 @@
 コードとテスト、編集手順・判定仕様・この記録のみをGitHubへ反映する。既存収集Actionはmainの判定コード変更で起動する設定で、次回の実収集からeditorial.json v2を生成する。古いqueue.jsonの取得日時を書き換えて新鮮に見せる手動更新は行わない。反映・CI・実収集の結果はそれぞれ別に確認する。
 
 見出しの題材照合には見逃し・過剰関連付けの余地がある。異なる公式ホストや大きな言い換えは特に人による確認が必要。見出しからの対象日はヒントであり、運行終了・復旧・安全の確認ではない。仕様は[EDITORIAL_QUEUE.md](EDITORIAL_QUEUE.md)。
+
+## GitHub反映の確認結果
+
+- [PR #3](https://github.com/MORRY1992/f-sp-topishirube/pull/3)に7ファイルを保存。初回コードコミットは`1e20acf69e6a00be45ea0d1cd85f69de2f28b9ba`。
+- [Validate publication #7](https://github.com/MORRY1992/f-sp-topishirube/actions/runs/40339871344): GitHub側CI成功。
+- PRの変更一覧を読戻し、公開記事・広告・画面・ワークフローに変更がないことを確認。
+- main統合のAPI操作はReadTimeout・Internal error。先端一致を指定した非強制のfast-forward操作もReadTimeout。結果不明のまま成功とせず、毎回読み戻して確認した。
+- 最終読戻しではPRはopen/未統合、mainは元の`c7c2662b25c6cc52892fdc60e782680eb82caa17`。dataは旧分類のまま。新コードの実収集適用と運用上の再分類は**未完了**。
+- 上表は固定入力を用いた再現試験結果であり、dataブランチの実更新結果ではない。main統合後は既存Actionの起動・editorial.json v2の件数とhealthを再確認する。
