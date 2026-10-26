@@ -1,4 +1,43 @@
 [
- {"id":"jr-east","name":"JR東日本 公式ニュースリリース","url":"https://www.jreast.co.jp/press/","kind":"html","host":"www.jreast.co.jp","pathPatterns":["^/press/[0-9]{4}/", "^/card/news/pdf/"],"category":"交通"},
- {"id":"sagano","name":"嵯峨野観光鉄道 公式お知らせ","url":"https://www.sagano-kanko.co.jp/","kind":"html","host":"www.sagano-kanko.co.jp","pathPatterns":["^/news/[0-9]+/?$"],"category":"鉄道・旅行"}
+  {
+    "id": "jr-east",
+    "name": "JR東日本 公式ニュースリリース",
+    "url": "https://www.jreast.co.jp/press/",
+    "kind": "html",
+    "host": "www.jreast.co.jp",
+    "pathPatterns": [
+      "^/press/[0-9]{4}/",
+      "^/card/news/pdf/"
+    ],
+    "category": "交通"
+  },
+  {
+    "id": "sagano",
+    "name": "嵯峨野観光鉄道 公式お知らせ",
+    "url": "https://www.sagano-kanko.co.jp/",
+    "kind": "html",
+    "host": "www.sagano-kanko.co.jp",
+    "pathPatterns": [
+      "^/news/[0-9]+/?$"
+    ],
+    "category": "鉄道・旅行",
+    "titlePattern": "^20[0-9]{2}/[0-9]{2}/[0-9]{2}"
+  },
+  {
+    "id": "ana",
+    "name": "ANAグループ 公式プレスリリース",
+    "url": "https://www.ana.co.jp/group/pr/",
+    "kind": "html",
+    "host": "www.ana.co.jp",
+    "pathPatterns": [
+      "^/group/pr/[0-9]{6}/[0-9]{8}(?:-[0-9]+)?\\.html$"
+    ],
+    "category": "交通",
+    "allowedLinkHosts": [
+      "www.ana.co.jp",
+      "www.anahd.co.jp"
+    ],
+    "enabled": false,
+    "note": "公式一覧が動的表示のため、静的収集での候補取得は未検証。接続先調査のみ。"
+  }
 ]

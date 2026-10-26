@@ -6,6 +6,11 @@ class RadarTests(unittest.TestCase):
  def test_host_path_and_duplicates(self):
   body=b'<a href="/press/2026/new.pdf?utm_source=x">New train launch today</a><a href="https://evil.test/press/2026/new.pdf">Fake breaking news headline</a><a href="/press/2026/new.pdf">New train launch today</a><a href="/login">Not a news announcement</a>'
   result=c.parse_source(body,self.source);self.assertEqual(len(result),1);self.assertEqual(result[0]['url'],'https://www.jreast.co.jp/press/2026/new.pdf');self.assertIsNone(result[0]['sourcePublishedAt'])
+ def test_duplicate_image_alt_and_listing_date(self):
+  self.assertEqual(c.plain('New train launch New train launch'),'New train launch')
+  self.source['titlePattern']='^20'
+  body='<a href="/press/2026/test.pdf">2026/10/23 新型列車のお知らせ</a><a href="/press/2026/shop.pdf">ショップ ショップ ショップ</a>'.encode()
+  result=c.parse_source(body,self.source);self.assertEqual(len(result),1);self.assertEqual(result[0]['sourceListedDate'],'2026-10-23');self.assertIsNone(result[0]['sourcePublishedAt'])
  def test_safe_links(self):
   for url in ['http://example.com','javascript:alert(1)','https://user:pass@example.com']:
    with self.assertRaises(ValueError):c.canonical(url)

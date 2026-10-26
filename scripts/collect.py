@@ -19,7 +19,10 @@ def canonical(url):
     query=urlencode(sorted((k,v)for k,v in parse_qsl(p.query) if not k.lower().startswith('utm_') and k.lower() not in ('fbclid','gclid')))
     return urlunsplit((p.scheme,p.netloc.lower(),p.path or '/',query,''))
 
-def plain(text):return re.sub(r'\s+',' ',html.unescape(re.sub('<[^>]*>','',text))).strip()[:240]
+def plain(text):
+    value=re.sub(r'\s+',' ',html.unescape(re.sub('<[^>]*>','',text))).strip()[:240]
+    repeated=re.fullmatch(r'(.{4,}?) \1(?: \1)?',value)
+    return repeated.group(1) if repeated else value
 
 class Links(HTMLParser):
     def __init__(self):super().__init__(convert_charrefs=True);self.links=[];self.href=None;self.parts=[]
@@ -48,17 +51,18 @@ def parse_source(body,source):
     result=[];seen=set()
     for link,title in entries:
         if not link or len(title)<10:continue
+        if source.get('titlePattern') and not re.search(source['titlePattern'],title):continue
         try:url=canonical(urljoin(source['url'],link))
         except ValueError:continue
         p=urlsplit(url)
-        if p.hostname!=source['host'] or not any(re.search(pattern,p.path) for pattern in source['pathPatterns']):continue
+        if p.hostname not in source.get('allowedLinkHosts',[source['host']]) or not any(re.search(pattern,p.path) for pattern in source['pathPatterns']):continue
         if url in seen:continue
-        seen.add(url);result.append({'id':hashlib.sha256(url.encode()).hexdigest()[:20],'title':title,'url':url,'sourceId':source['id'],'sourceName':source['name'],'category':source['category'],'sourcePublishedAt':None})
+        seen.add(url);result.append({'id':hashlib.sha256(url.encode()).hexdigest()[:20],'title':title,'url':url,'sourceId':source['id'],'sourceName':source['name'],'category':source['category'],'sourcePublishedAt':None,'sourceListedDate':(re.match(r'^(20[0-9]{2})/([0-9]{2})/([0-9]{2})',title).group(0).replace('/','-') if re.match(r'^(20[0-9]{2})/([0-9]{2})/([0-9]{2})',title) else None)})
     return result[:100]
 
 def rank(title):
-    if any(x in title for x in ['全線運休','長期間運休','運転見合わせ','重大','リコール']):return 'S','緊急・重大の可能性を示す語を検出。公式本文の確認が必要'
-    if any(x in title for x in ['新型','運行開始','ダイヤ改正','値上げ','料金改定','キャンペーン','発売']):return 'A','予定・予約・利用条件に関わる語を検出'
+    if any(x in title for x in ['全線運休','長期間運休','運休','運転見合わせ','重大','リコール']):return 'S','緊急・重大の可能性を示す語を検出。公式本文の確認が必要'
+    if any(x in title for x in ['新型','運行開始','ダイヤ改正','値上げ','料金改定','料金体系の変更','キャンペーン','発売']):return 'A','予定・予約・利用条件に関わる語を検出'
     if any(x in title for x in ['お知らせ','イベント','臨時','運転','開業']):return 'B','利用者向けの変更・イベント候補'
     if any(x in title for x in ['決算','株主','人事']):return 'D','初期の実用ニュース対象から外れる可能性'
     return 'C','補足候補。対象と実用性を要確認'
@@ -84,7 +88,7 @@ def fetch(url,allowed_host):
 
 def run(output,previous):
     now=dt.datetime.now(UTC).isoformat(timespec='seconds');prior=json.loads(previous.read_text()) if previous and previous.exists() else {}
-    sources=json.loads((ROOT/'content/sources.json').read_text());articles=json.loads((ROOT/'content/articles.json').read_text());items=[];runs=[]
+    sources=[x for x in json.loads((ROOT/'content/sources.json').read_text()) if x.get('enabled',True)];articles=json.loads((ROOT/'content/articles.json').read_text());items=[];runs=[]
     if len(sources)>8:raise ValueError('At most 8 index sources')
     for source in sources:
         try:
@@ -98,7 +102,9 @@ def run(output,previous):
             body,status=fetch(url,urlsplit(url).hostname);digest=hashlib.sha256(body).hexdigest();monitors.append({'url':url,'checkedAt':now,'status':status,'sha256':digest,'changed':bool(oldhash.get(url) and oldhash[url]!=digest),'previousSha256':oldhash.get(url),'action':'editorial-review-only'})
         except Exception as e:monitors.append({'url':url,'checkedAt':now,'status':'failed','sha256':oldhash.get(url),'error':type(e).__name__+': '+str(e)[:160],'changed':None})
         time.sleep(1)
-    result={'version':1,'collectedAt':now,'notice':'候補は未検証。公開記事ではありません。重要度は見出しによる仮判定です。','sources':runs,'sourceMonitors':monitors,'candidates':merge(prior.get('candidates',[]),items,now),'runs':(prior.get('runs',[])+[{'at':now,'sourcesOk':sum(x['status']==200 for x in runs),'sourcesTotal':len(runs),'newlySeen':len([x for x in items if x['id'] not in {v['id']for v in prior.get('candidates',[])}])}])[-30:]}
+    rules={v['id']:v.get('titlePattern')for v in sources}
+    previous_candidates=[x for x in prior.get('candidates',[]) if not rules.get(x.get('sourceId')) or re.search(rules[x['sourceId']],x['title'])]
+    result={'version':1,'collectedAt':now,'notice':'候補は未検証。公開記事ではありません。重要度は見出しによる仮判定です。','sources':runs,'sourceMonitors':monitors,'candidates':merge(previous_candidates,items,now),'runs':(prior.get('runs',[])+[{'at':now,'sourcesOk':sum(x['status']==200 for x in runs),'sourcesTotal':len(runs),'newlySeen':len([x for x in items if x['id'] not in {v['id']for v in prior.get('candidates',[])}])}])[-30:]}
     output.parent.mkdir(parents=True,exist_ok=True);output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({'sources':runs,'candidates':len(result['candidates']),'monitors':len(monitors)},ensure_ascii=False))
     return 0 if any(x['status']==200 and x['candidateCount']>0 for x in runs) else 2
