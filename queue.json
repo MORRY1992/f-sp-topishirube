@@ -1,28 +1,28 @@
 {
   "version": 1,
-  "collectedAt": "2026-10-26T09:05:07+00:00",
+  "collectedAt": "2026-10-26T09:12:37+00:00",
   "notice": "候補は未検証。公開記事ではありません。重要度は見出しによる仮判定です。",
   "sources": [
     {
       "sourceId": "jr-east",
       "url": "https://www.jreast.co.jp/press/",
-      "checkedAt": "2026-10-26T09:05:07+00:00",
+      "checkedAt": "2026-10-26T09:12:37+00:00",
       "status": "failed",
       "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     {
       "sourceId": "sagano",
       "url": "https://www.sagano-kanko.co.jp/",
-      "checkedAt": "2026-10-26T09:05:07+00:00",
+      "checkedAt": "2026-10-26T09:12:37+00:00",
       "status": 200,
-      "candidateCount": 13,
+      "candidateCount": 5,
       "parserWarning": null
     }
   ],
   "sourceMonitors": [
     {
       "url": "https://www.jreast.co.jp/card/news/pdf/20261026.pdf",
-      "checkedAt": "2026-10-26T09:05:07+00:00",
+      "checkedAt": "2026-10-26T09:12:37+00:00",
       "status": "failed",
       "sha256": null,
       "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -30,16 +30,16 @@
     },
     {
       "url": "https://www.sagano-kanko.co.jp/cms/wp-content/uploads/2026/10/261023_1000_%E3%83%97%E3%83%AC%E3%82%B9%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9.pdf",
-      "checkedAt": "2026-10-26T09:05:07+00:00",
+      "checkedAt": "2026-10-26T09:12:37+00:00",
       "status": 200,
       "sha256": "45223d44881f791cc438bb6a39f1106cfa4618b2cbee95d3f3621b76c8c4d3f5",
       "changed": false,
-      "previousSha256": null,
+      "previousSha256": "45223d44881f791cc438bb6a39f1106cfa4618b2cbee95d3f3621b76c8c4d3f5",
       "action": "editorial-review-only"
     },
     {
       "url": "https://www.jreast.co.jp/press/2026/20261022_ho.pdf",
-      "checkedAt": "2026-10-26T09:05:07+00:00",
+      "checkedAt": "2026-10-26T09:12:37+00:00",
       "status": "failed",
       "sha256": null,
       "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -47,7 +47,7 @@
     },
     {
       "url": "https://www.jreast.co.jp/press/2026/winterextratrain/",
-      "checkedAt": "2026-10-26T09:05:07+00:00",
+      "checkedAt": "2026-10-26T09:12:37+00:00",
       "status": "failed",
       "sha256": null,
       "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -56,20 +56,21 @@
   ],
   "candidates": [
     {
-      "id": "68c8d5d3d5219960f7eb",
-      "title": "2027年3月1日 新型車両デビュー 2027年3月1日 新型車両デビュー",
-      "url": "https://www.sagano-kanko.co.jp/news/4796/",
+      "id": "498916f3cbf396d2c783",
+      "title": "2026/10/23 10月23日(金) 列車の運休について",
+      "url": "https://www.sagano-kanko.co.jp/news/5590/",
       "sourceId": "sagano",
       "sourceName": "嵯峨野観光鉄道 公式お知らせ",
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
-      "priority": "A",
-      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "lastSeenAt": "2026-10-26T09:12:37+00:00",
+      "priority": "S",
+      "priorityReason": "緊急・重大の可能性を示す語を検出。公式本文の確認が必要",
       "status": "candidate",
       "bodyVerified": false,
-      "autoPublish": false
+      "autoPublish": false,
+      "sourceListedDate": "2026-10-23"
     },
     {
       "id": "10221c302287e8df83b4",
@@ -80,12 +81,13 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
+      "lastSeenAt": "2026-10-26T09:12:37+00:00",
       "priority": "A",
       "priorityReason": "予定・予約・利用条件に関わる語を検出",
       "status": "candidate",
       "bodyVerified": false,
-      "autoPublish": false
+      "autoPublish": false,
+      "sourceListedDate": "2026-10-23"
     },
     {
       "id": "49a5686c74d0c4d615e2",
@@ -96,28 +98,13 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
+      "lastSeenAt": "2026-10-26T09:12:37+00:00",
       "priority": "A",
       "priorityReason": "予定・予約・利用条件に関わる語を検出",
       "status": "candidate",
       "bodyVerified": false,
-      "autoPublish": false
-    },
-    {
-      "id": "8010281f813f6b78576c",
-      "title": "1991年開業以来の歴史を振り返るなら「ジオラマ京都JAPAN」へ！ 1991年開業以来の歴史を振り返るなら「ジオラマ京都JAPAN」へ！",
-      "url": "https://www.sagano-kanko.co.jp/news/4941/",
-      "sourceId": "sagano",
-      "sourceName": "嵯峨野観光鉄道 公式お知らせ",
-      "category": "鉄道・旅行",
-      "sourcePublishedAt": null,
-      "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
-      "priority": "B",
-      "priorityReason": "利用者向けの変更・イベント候補",
-      "status": "candidate",
-      "bodyVerified": false,
-      "autoPublish": false
+      "autoPublish": false,
+      "sourceListedDate": "2026-10-02"
     },
     {
       "id": "40ef82383e2916000386",
@@ -128,12 +115,13 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
+      "lastSeenAt": "2026-10-26T09:12:37+00:00",
       "priority": "B",
       "priorityReason": "利用者向けの変更・イベント候補",
       "status": "candidate",
       "bodyVerified": false,
-      "autoPublish": false
+      "autoPublish": false,
+      "sourceListedDate": "2026-10-23"
     },
     {
       "id": "622535ad4f9eb4179a86",
@@ -144,124 +132,13 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
+      "lastSeenAt": "2026-10-26T09:12:37+00:00",
       "priority": "B",
       "priorityReason": "利用者向けの変更・イベント候補",
       "status": "candidate",
       "bodyVerified": false,
-      "autoPublish": false
-    },
-    {
-      "id": "dc0706867052d80445aa",
-      "title": "【2026年7月～10月】ピアノ貸出しのご案内 【2026年7月～10月】ピアノ貸出しのご案内",
-      "url": "https://www.sagano-kanko.co.jp/news/4657/",
-      "sourceId": "sagano",
-      "sourceName": "嵯峨野観光鉄道 公式お知らせ",
-      "category": "鉄道・旅行",
-      "sourcePublishedAt": null,
-      "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
-      "priority": "C",
-      "priorityReason": "補足候補。対象と実用性を要確認",
-      "status": "candidate",
-      "bodyVerified": false,
-      "autoPublish": false
-    },
-    {
-      "id": "14171913b626e517a6af",
-      "title": "トロッコ列車のご乗車は二次元コードで！ トロッコ列車のご乗車は二次元コードで！",
-      "url": "https://www.sagano-kanko.co.jp/news/3093/",
-      "sourceId": "sagano",
-      "sourceName": "嵯峨野観光鉄道 公式お知らせ",
-      "category": "鉄道・旅行",
-      "sourcePublishedAt": null,
-      "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
-      "priority": "C",
-      "priorityReason": "補足候補。対象と実用性を要確認",
-      "status": "candidate",
-      "bodyVerified": false,
-      "autoPublish": false
-    },
-    {
-      "id": "e2e5a24e394b25231034",
-      "title": "トロッコ亀岡駅駐車場 料金体系の変更について トロッコ亀岡駅駐車場 料金体系の変更について",
-      "url": "https://www.sagano-kanko.co.jp/news/1643/",
-      "sourceId": "sagano",
-      "sourceName": "嵯峨野観光鉄道 公式お知らせ",
-      "category": "鉄道・旅行",
-      "sourcePublishedAt": null,
-      "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
-      "priority": "C",
-      "priorityReason": "補足候補。対象と実用性を要確認",
-      "status": "candidate",
-      "bodyVerified": false,
-      "autoPublish": false
-    },
-    {
-      "id": "f5bcdfca7905c3a5894b",
-      "title": "トロッコ嵯峨駅、トロッコ亀岡駅へのアクセス トロッコ嵯峨駅、トロッコ亀岡駅へのアクセス",
-      "url": "https://www.sagano-kanko.co.jp/news/714/",
-      "sourceId": "sagano",
-      "sourceName": "嵯峨野観光鉄道 公式お知らせ",
-      "category": "鉄道・旅行",
-      "sourcePublishedAt": null,
-      "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
-      "priority": "C",
-      "priorityReason": "補足候補。対象と実用性を要確認",
-      "status": "candidate",
-      "bodyVerified": false,
-      "autoPublish": false
-    },
-    {
-      "id": "3b76a2ef6cdd9094ebea",
-      "title": "ショップ ショップ ショップ",
-      "url": "https://www.sagano-kanko.co.jp/news/2695/",
-      "sourceId": "sagano",
-      "sourceName": "嵯峨野観光鉄道 公式お知らせ",
-      "category": "鉄道・旅行",
-      "sourcePublishedAt": null,
-      "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
-      "priority": "C",
-      "priorityReason": "補足候補。対象と実用性を要確認",
-      "status": "candidate",
-      "bodyVerified": false,
-      "autoPublish": false
-    },
-    {
-      "id": "ded87e90d71780073e20",
-      "title": "グルメスポット グルメスポット グルメスポット",
-      "url": "https://www.sagano-kanko.co.jp/news/328/",
-      "sourceId": "sagano",
-      "sourceName": "嵯峨野観光鉄道 公式お知らせ",
-      "category": "鉄道・旅行",
-      "sourcePublishedAt": null,
-      "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
-      "priority": "C",
-      "priorityReason": "補足候補。対象と実用性を要確認",
-      "status": "candidate",
-      "bodyVerified": false,
-      "autoPublish": false
-    },
-    {
-      "id": "498916f3cbf396d2c783",
-      "title": "2026/10/23 10月23日(金) 列車の運休について",
-      "url": "https://www.sagano-kanko.co.jp/news/5590/",
-      "sourceId": "sagano",
-      "sourceName": "嵯峨野観光鉄道 公式お知らせ",
-      "category": "鉄道・旅行",
-      "sourcePublishedAt": null,
-      "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-26T09:05:07+00:00",
-      "priority": "C",
-      "priorityReason": "補足候補。対象と実用性を要確認",
-      "status": "candidate",
-      "bodyVerified": false,
-      "autoPublish": false
+      "autoPublish": false,
+      "sourceListedDate": "2026-10-19"
     }
   ],
   "runs": [
@@ -270,6 +147,12 @@
       "sourcesOk": 1,
       "sourcesTotal": 2,
       "newlySeen": 13
+    },
+    {
+      "at": "2026-10-26T09:12:37+00:00",
+      "sourcesOk": 1,
+      "sourcesTotal": 2,
+      "newlySeen": 0
     }
   ]
 }
