@@ -1,0 +1,4 @@
+[
+ {"id":"jr-east","name":"JR東日本 公式ニュースリリース","url":"https://www.jreast.co.jp/press/","kind":"html","host":"www.jreast.co.jp","pathPatterns":["^/press/[0-9]{4}/", "^/card/news/pdf/"],"category":"交通"},
+ {"id":"sagano","name":"嵯峨野観光鉄道 公式お知らせ","url":"https://www.sagano-kanko.co.jp/","kind":"html","host":"www.sagano-kanko.co.jp","pathPatterns":["^/news/[0-9]+/?$"],"category":"鉄道・旅行"}
+]

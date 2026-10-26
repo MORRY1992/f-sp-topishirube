@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://morry1992.github.io/f-sp-topishirube/sitemap.xml

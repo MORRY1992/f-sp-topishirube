@@ -1,0 +1,51 @@
+name: Official news radar
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */3 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: news-radar
+  cancel-in-progress: false
+jobs:
+  collect:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Collect official source candidates (no publication)
+        shell: bash
+        run: |
+          if git fetch origin refs/heads/data:refs/remotes/origin/data --depth=1; then
+            git show FETCH_HEAD:queue.json > "$RUNNER_TEMP/previous.json"
+          fi
+          set +e
+          python scripts/collect.py --output "$RUNNER_TEMP/queue.json" --previous "$RUNNER_TEMP/previous.json"
+          result=$?
+          set -e
+          echo "RADAR_RESULT=$result" >> "$GITHUB_ENV"
+      - name: Save bounded queue on isolated data branch
+        shell: bash
+        run: |
+          git config user.name 'Topishirube radar'
+          git config user.email 'topishirube-radar@users.noreply.github.com'
+          if git show-ref --verify --quiet refs/remotes/origin/data; then
+            git switch -C data refs/remotes/origin/data
+          else
+            git switch --orphan data
+          fi
+          cp "$RUNNER_TEMP/queue.json" queue.json
+          git add queue.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update official news candidates (not articles)'
+            git push origin HEAD:data
+          fi
+      - name: Report source availability
+        shell: bash
+        run: |
+          python -c 'import json,os; q=json.load(open("queue.json")); f=open(os.environ["GITHUB_STEP_SUMMARY"],"a"); f.write("## Official radar\nCandidates are unverified; no articles published.\n\n"+"\n".join("- "+s["sourceId"]+": "+str(s["status"])+" / "+str(s.get("candidateCount","unknown")) for s in q["sources"]))'
+          test "$RADAR_RESULT" = 0
