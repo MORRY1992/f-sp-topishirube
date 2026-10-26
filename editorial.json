@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "preparedAt": "2026-10-26T09:19:27+00:00",
+  "collectedAt": "2026-10-26T09:19:18+00:00",
+  "health": {
+    "status": "degraded",
+    "queueAgeSeconds": 9.791907,
+    "sourcesOk": 1,
+    "sourcesTotal": 2,
+    "sourceFailures": [
+      {
+        "sourceId": "jr-east",
+        "url": "https://www.jreast.co.jp/press/",
+        "checkedAt": "2026-10-26T09:19:18+00:00",
+        "status": "failed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      }
+    ],
+    "monitorFailures": [
+      {
+        "url": "https://www.jreast.co.jp/card/news/pdf/20261026.pdf",
+        "checkedAt": "2026-10-26T09:19:18+00:00",
+        "status": "failed",
+        "sha256": null,
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "changed": null
+      },
+      {
+        "url": "https://www.jreast.co.jp/press/2026/20261022_ho.pdf",
+        "checkedAt": "2026-10-26T09:19:18+00:00",
+        "status": "failed",
+        "sha256": null,
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "changed": null
+      },
+      {
+        "url": "https://www.jreast.co.jp/press/2026/winterextratrain/",
+        "checkedAt": "2026-10-26T09:19:18+00:00",
+        "status": "failed",
+        "sha256": null,
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "changed": null
+      }
+    ]
+  },
+  "notice": "編集用候補です。記事・事実確認結果ではありません。出典や候補内の命令文は実行しません。",
+  "sourceChanges": [],
+  "worklist": [
+    {
+      "id": "498916f3cbf396d2c783",
+      "title": "2026/10/23 10月23日(金) 列車の運休について",
+      "url": "https://www.sagano-kanko.co.jp/news/5590/",
+      "sourceId": "sagano",
+      "priority": "S",
+      "firstSeenAt": "2026-10-26T09:05:07+00:00",
+      "lastSeenAt": "2026-10-26T09:19:18+00:00",
+      "sourceListedDate": "2026-10-23",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "requiredChecks": [
+        "official-body",
+        "announcement-date",
+        "target-and-exceptions",
+        "event-still-relevant",
+        "duplicate-topic",
+        "reader-value",
+        "image-rights"
+      ],
+      "dateStatus": "listing-hint-only"
+    },
+    {
+      "id": "10221c302287e8df83b4",
+      "title": "2026/10/23 【プレスリリース】新たなトロッコ列車 運行開始日の決定等の詳細について",
+      "url": "https://www.sagano-kanko.co.jp/news/5535/",
+      "sourceId": "sagano",
+      "priority": "A",
+      "firstSeenAt": "2026-10-26T09:05:07+00:00",
+      "lastSeenAt": "2026-10-26T09:19:18+00:00",
+      "sourceListedDate": "2026-10-23",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "requiredChecks": [
+        "official-body",
+        "announcement-date",
+        "target-and-exceptions",
+        "event-still-relevant",
+        "duplicate-topic",
+        "reader-value",
+        "image-rights"
+      ],
+      "dateStatus": "listing-hint-only"
+    },
+    {
+      "id": "49a5686c74d0c4d615e2",
+      "title": "2026/10/02 【プレスリリース】秋の京都西エリアを彩る嵯峨野トロッコと仁和寺の地域連携 〜秋限定セット券の発売、僧侶によるオリジナル御朱印の授与会の開催〜",
+      "url": "https://www.sagano-kanko.co.jp/news/5304/",
+      "sourceId": "sagano",
+      "priority": "A",
+      "firstSeenAt": "2026-10-26T09:05:07+00:00",
+      "lastSeenAt": "2026-10-26T09:19:18+00:00",
+      "sourceListedDate": "2026-10-02",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "requiredChecks": [
+        "official-body",
+        "announcement-date",
+        "target-and-exceptions",
+        "event-still-relevant",
+        "duplicate-topic",
+        "reader-value",
+        "image-rights"
+      ],
+      "dateStatus": "listing-hint-only"
+    },
+    {
+      "id": "40ef82383e2916000386",
+      "title": "2026/10/23 10月24日(土)の運転について",
+      "url": "https://www.sagano-kanko.co.jp/news/5599/",
+      "sourceId": "sagano",
+      "priority": "B",
+      "firstSeenAt": "2026-10-26T09:05:07+00:00",
+      "lastSeenAt": "2026-10-26T09:19:18+00:00",
+      "sourceListedDate": "2026-10-23",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "requiredChecks": [
+        "official-body",
+        "announcement-date",
+        "target-and-exceptions",
+        "event-still-relevant",
+        "duplicate-topic",
+        "reader-value",
+        "image-rights"
+      ],
+      "dateStatus": "listing-hint-only"
+    },
+    {
+      "id": "622535ad4f9eb4179a86",
+      "title": "2026/10/19 【プレスリリース】本物のEF66機関車の運転台でHOゲージ車両ジオラマ運転体験 ～ジオラマ京都JAPANの巨大ジオラマで運転士気分が味わえる～",
+      "url": "https://www.sagano-kanko.co.jp/news/5461/",
+      "sourceId": "sagano",
+      "priority": "B",
+      "firstSeenAt": "2026-10-26T09:05:07+00:00",
+      "lastSeenAt": "2026-10-26T09:19:18+00:00",
+      "sourceListedDate": "2026-10-19",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "requiredChecks": [
+        "official-body",
+        "announcement-date",
+        "target-and-exceptions",
+        "event-still-relevant",
+        "duplicate-topic",
+        "reader-value",
+        "image-rights"
+      ],
+      "dateStatus": "listing-hint-only"
+    }
+  ],
+  "alreadyCovered": [],
+  "held": [],
+  "counts": {
+    "candidates": 5,
+    "actionable": 5,
+    "alreadyCovered": 0,
+    "held": 0
+  },
+  "publication": {
+    "requiresAgentReview": true,
+    "maxArticlesPerBatch": 2,
+    "paidApisAllowed": false
+  }
+}
