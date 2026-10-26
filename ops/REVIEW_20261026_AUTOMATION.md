@@ -23,3 +23,13 @@
 - 既存GitHub Pagesの試験公開は維持。今回は公開ページのレイアウト・記事本文・画像を変更していない。ローカル検証を公開反映検証と混同しない。
 - JR東日本取得403は前回収集で継続。アクセス制限の迂回は行っていない。編集エージェントによる正規Web検索・公式本文取得での補完か、保留が必要。
 - 完全無人の継続稼働・画像の自動生成・Cloudflare本番接続は未確認。GitHub上のCI・更新後Actionの結果は実行後に追記する。
+
+## GitHub反映後の実測
+
+- PR #2を検証後にmainへ統合。統合コミット：ed1a798317ec91957f02747c9fc219b467c6e0e7。
+- PR CI成功：https://github.com/MORRY1992/f-sp-topishirube/actions/runs/40298518917
+- main CI成功：https://github.com/MORRY1992/f-sp-topishirube/actions/runs/40298620713
+- 更新後収集Action成功：https://github.com/MORRY1992/f-sp-topishirube/actions/runs/40298620547
+- GitHub Pages再配信成功：https://github.com/MORRY1992/f-sp-topishirube/actions/runs/40298619488
+- data/editorial.jsonを実際に読戻し。取得2026-10-26 18:19:18 JST、編集リスト生成18:19:27 JST。5候補すべてbodyVerified=false、autoPublish=falseを維持。1/2取得元成功、JR東日本403と同社の出典監視3件失敗をdegradedとして記録。
+- これは収集→編集用リスト保存の実行確認であり、記事の無人執筆・公開成功ではない。Work定期編集は15/15の上限により未登録のまま。
