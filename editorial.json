@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "preparedAt": "2026-10-27T12:55:26+00:00",
-  "collectedAt": "2026-10-27T12:55:16+00:00",
+  "preparedAt": "2026-10-27T15:54:29+00:00",
+  "collectedAt": "2026-10-27T15:54:19+00:00",
   "health": {
     "status": "degraded",
-    "queueAgeSeconds": 10.280779,
+    "queueAgeSeconds": 10.190985,
     "sourcesOk": 1,
     "sourcesTotal": 2,
     "sourceFailures": [
       {
         "sourceId": "jr-east",
         "url": "https://www.jreast.co.jp/press/",
-        "checkedAt": "2026-10-27T12:55:16+00:00",
+        "checkedAt": "2026-10-27T15:54:19+00:00",
         "status": "failed",
         "error": "HTTPError: HTTP Error 403: Forbidden"
       }
@@ -19,7 +19,7 @@
     "monitorFailures": [
       {
         "url": "https://www.jreast.co.jp/card/news/pdf/20261026.pdf",
-        "checkedAt": "2026-10-27T12:55:16+00:00",
+        "checkedAt": "2026-10-27T15:54:19+00:00",
         "status": "failed",
         "sha256": null,
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -27,7 +27,7 @@
       },
       {
         "url": "https://www.jreast.co.jp/press/2026/20261022_ho.pdf",
-        "checkedAt": "2026-10-27T12:55:16+00:00",
+        "checkedAt": "2026-10-27T15:54:19+00:00",
         "status": "failed",
         "sha256": null,
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -35,7 +35,7 @@
       },
       {
         "url": "https://www.jreast.co.jp/press/2026/winterextratrain/",
-        "checkedAt": "2026-10-27T12:55:16+00:00",
+        "checkedAt": "2026-10-27T15:54:19+00:00",
         "status": "failed",
         "sha256": null,
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -53,7 +53,7 @@
       "sourceId": "sagano",
       "priority": "S",
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-27T12:55:16+00:00",
+      "lastSeenAt": "2026-10-27T15:54:19+00:00",
       "sourceListedDate": "2026-10-23",
       "bodyVerified": false,
       "autoPublish": false,
@@ -75,7 +75,7 @@
       "sourceId": "sagano",
       "priority": "A",
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-27T12:55:16+00:00",
+      "lastSeenAt": "2026-10-27T15:54:19+00:00",
       "sourceListedDate": "2026-10-23",
       "bodyVerified": false,
       "autoPublish": false,
@@ -97,7 +97,7 @@
       "sourceId": "sagano",
       "priority": "A",
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-27T12:55:16+00:00",
+      "lastSeenAt": "2026-10-27T15:54:19+00:00",
       "sourceListedDate": "2026-10-02",
       "bodyVerified": false,
       "autoPublish": false,
@@ -119,7 +119,7 @@
       "sourceId": "sagano",
       "priority": "B",
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-27T12:55:16+00:00",
+      "lastSeenAt": "2026-10-27T15:54:19+00:00",
       "sourceListedDate": "2026-10-23",
       "bodyVerified": false,
       "autoPublish": false,
@@ -141,7 +141,7 @@
       "sourceId": "sagano",
       "priority": "B",
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-27T12:55:16+00:00",
+      "lastSeenAt": "2026-10-27T15:54:19+00:00",
       "sourceListedDate": "2026-10-19",
       "bodyVerified": false,
       "autoPublish": false,
