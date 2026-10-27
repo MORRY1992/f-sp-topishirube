@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "collectedAt": "2026-10-27T18:53:14+00:00",
+  "collectedAt": "2026-10-27T21:44:05+00:00",
   "notice": "候補は未検証。公開記事ではありません。重要度は見出しによる仮判定です。",
   "sources": [
     {
       "sourceId": "jr-east",
       "url": "https://www.jreast.co.jp/press/",
-      "checkedAt": "2026-10-27T18:53:14+00:00",
+      "checkedAt": "2026-10-27T21:44:05+00:00",
       "status": "failed",
       "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     {
       "sourceId": "sagano",
       "url": "https://www.sagano-kanko.co.jp/",
-      "checkedAt": "2026-10-27T18:53:14+00:00",
+      "checkedAt": "2026-10-27T21:44:05+00:00",
       "status": 200,
       "candidateCount": 5,
       "parserWarning": null
@@ -22,7 +22,7 @@
   "sourceMonitors": [
     {
       "url": "https://www.jreast.co.jp/card/news/pdf/20261026.pdf",
-      "checkedAt": "2026-10-27T18:53:14+00:00",
+      "checkedAt": "2026-10-27T21:44:05+00:00",
       "status": "failed",
       "sha256": null,
       "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -30,7 +30,7 @@
     },
     {
       "url": "https://www.sagano-kanko.co.jp/cms/wp-content/uploads/2026/10/261023_1000_%E3%83%97%E3%83%AC%E3%82%B9%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9.pdf",
-      "checkedAt": "2026-10-27T18:53:14+00:00",
+      "checkedAt": "2026-10-27T21:44:05+00:00",
       "status": 200,
       "sha256": "45223d44881f791cc438bb6a39f1106cfa4618b2cbee95d3f3621b76c8c4d3f5",
       "changed": false,
@@ -39,7 +39,7 @@
     },
     {
       "url": "https://www.jreast.co.jp/press/2026/20261022_ho.pdf",
-      "checkedAt": "2026-10-27T18:53:14+00:00",
+      "checkedAt": "2026-10-27T21:44:05+00:00",
       "status": "failed",
       "sha256": null,
       "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -47,7 +47,7 @@
     },
     {
       "url": "https://www.jreast.co.jp/press/2026/winterextratrain/",
-      "checkedAt": "2026-10-27T18:53:14+00:00",
+      "checkedAt": "2026-10-27T21:44:05+00:00",
       "status": "failed",
       "sha256": null,
       "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -64,7 +64,7 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-27T18:53:14+00:00",
+      "lastSeenAt": "2026-10-27T21:44:05+00:00",
       "priority": "S",
       "priorityReason": "緊急・重大の可能性を示す語を検出。公式本文の確認が必要",
       "status": "candidate",
@@ -81,7 +81,7 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-27T18:53:14+00:00",
+      "lastSeenAt": "2026-10-27T21:44:05+00:00",
       "priority": "A",
       "priorityReason": "予定・予約・利用条件に関わる語を検出",
       "status": "candidate",
@@ -98,7 +98,7 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-27T18:53:14+00:00",
+      "lastSeenAt": "2026-10-27T21:44:05+00:00",
       "priority": "A",
       "priorityReason": "予定・予約・利用条件に関わる語を検出",
       "status": "candidate",
@@ -115,7 +115,7 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-27T18:53:14+00:00",
+      "lastSeenAt": "2026-10-27T21:44:05+00:00",
       "priority": "B",
       "priorityReason": "利用者向けの変更・イベント候補",
       "status": "candidate",
@@ -132,7 +132,7 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-27T18:53:14+00:00",
+      "lastSeenAt": "2026-10-27T21:44:05+00:00",
       "priority": "B",
       "priorityReason": "利用者向けの変更・イベント候補",
       "status": "candidate",
@@ -234,6 +234,12 @@
     },
     {
       "at": "2026-10-27T18:53:14+00:00",
+      "sourcesOk": 1,
+      "sourcesTotal": 2,
+      "newlySeen": 0
+    },
+    {
+      "at": "2026-10-27T21:44:05+00:00",
       "sourcesOk": 1,
       "sourcesTotal": 2,
       "newlySeen": 0
