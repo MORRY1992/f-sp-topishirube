@@ -43,6 +43,16 @@
 
 ## GitHubでの確認
 
-修正をmainへ反映すると既存のpushトリガーが収集を実行する。3時間間隔の定期実行設定は変更していない。
+PR #4をmainへ統合済み（45516c2db1e492dd58933a97d62f5fa127cc4f6a）。既存のpushトリガーによる実収集も完了した。3時間間隔の定期実行設定は変更していない。
 確認対象はdata/editorial.jsonのhealth、sourceFailures、monitorFailures、分類件数と、Actionsの実行サマリー。
 403が継続する場合はdegradedのまま候補を保存し、Actionも失敗表示にする。本体の解消と補助RSSの成功を分けて判断する。
+
+### GitHub-hosted runnerでの実測（2026-10-30 00:58:07 JST）
+
+- 修正PR：https://github.com/MORRY1992/f-sp-topishirube/pull/4 （merged）。
+- 検証CI：https://github.com/MORRY1992/f-sp-topishirube/actions/runs/40906847161 （success）。PR検証CIもsuccess。
+- 実収集：https://github.com/MORRY1992/f-sp-topishirube/actions/runs/40906847231 。
+- JR東日本企業別RSSは200・100候補、嵯峨野は200・5候補。本体一覧とJR東日本の出典3件の403は継続。RSSが本体の全発表を補ったとは判断しない。
+- dataへの保存に成功（9c90294）。候補総数106、編集作業候補11、既報1、保留94、health=degraded。本文確認済み・自動公開を許可した候補はない。記事公開0件。
+- 取得・分類・保存の各ステップはsuccess、最後の健全性報告ステップが意図どおり非ゼロで終了し、Action全体はfailure。単なる実行完了と全情報源の健全性を混同しないことを実ランでも確認した。
+- 次回の定期実行は既存cron（17 */3 * * *、UTC）の同じコードを使用する。追加のWorkスケジュール・API契約は作成していない。
