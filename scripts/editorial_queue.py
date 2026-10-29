@@ -134,9 +134,12 @@ def prepare(queue, articles, now=None, topic_index=None):
         if matches:
             entry.update(articleIds=matches, action='review-existing-for-update', updateReviewRequired=True)
         seen = stamp(item.get('lastSeenAt'))
-        if not fresh or item.get('sourceId') not in source_ok or not seen or not -300 <= (now-seen).total_seconds() <= 6*3600:
+        observations = item.get('sourceObservations') or [{k: item.get(k) for k in ('sourceId', 'url', 'lastSeenAt')}]
+        evidence = [v for v in observations if v.get('sourceId') in source_ok and key(v.get('url')) and stamp(v.get('lastSeenAt')) and -300 <= (now-stamp(v['lastSeenAt'])).total_seconds() <= 6*3600]
+        if not fresh or not evidence or not seen or not -300 <= (now-seen).total_seconds() <= 6*3600:
             held.append({**entry, 'reason': 'stale-or-unavailable-source; direct official retrieval required'})
             continue
+        entry['collectionEvidence'] = evidence[:8]
         event_hint = service_date_hint(item)
         if event_hint:
             entry['eventDateHint'] = event_hint.isoformat()
@@ -144,9 +147,18 @@ def prepare(queue, articles, now=None, topic_index=None):
             if event_hint < now.astimezone(JST).date():
                 held.append({**entry, 'reason': 'past-dated-service-notice; recheck current official status, not proof the disruption ended'})
                 continue
+        listed = date_only(item.get('sourceListedDate'))
+        today = now.astimezone(JST).date()
+        if listed and listed > today:
+            held.append({**entry, 'reason': 'future-listed-date; official date verification required'})
+            continue
+        max_age = item.get('maxListedAgeDays')
+        if listed and isinstance(max_age, int) and (today-listed).days > max_age:
+            held.append({**entry, 'reason': 'old-listed-item; rediscovery is not a new announcement'})
+            continue
         # The date of first discovery is never used as an announcement date.
         entry['requiredChecks'] = ['official-body', 'announcement-date', 'target-and-exceptions', 'event-still-relevant', 'duplicate-topic', 'reader-value', 'image-rights']
-        entry['dateStatus'] = 'listing-hint-only' if entry['sourceListedDate'] else 'unknown'
+        entry['dateStatus'] = ('feed-hint-only' if item.get('sourceDateBasis') == 'feed-hint' else 'listing-hint-only') if entry['sourceListedDate'] else 'unknown'
         if entry['priority'] in ('S', 'A', 'B'):
             work.append(entry)
         else:
