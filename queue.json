@@ -1,20 +1,36 @@
 {
   "version": 1,
-  "collectedAt": "2026-10-29T13:06:22+00:00",
+  "collectedAt": "2026-10-29T15:58:07+00:00",
+  "health": {
+    "status": "degraded",
+    "sourcesOk": 2,
+    "sourcesTotal": 3
+  },
   "notice": "候補は未検証。公開記事ではありません。重要度は見出しによる仮判定です。",
   "sources": [
     {
       "sourceId": "jr-east",
       "url": "https://www.jreast.co.jp/press/",
-      "checkedAt": "2026-10-29T13:06:22+00:00",
+      "checkedAt": "2026-10-29T15:58:07+00:00",
       "status": "failed",
-      "error": "HTTPError: HTTP Error 403: Forbidden"
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "httpStatus": 403
+    },
+    {
+      "sourceId": "jr-east-prtimes",
+      "url": "https://prtimes.jp/companyrdf.php?company_id=17557",
+      "checkedAt": "2026-10-29T15:58:07+00:00",
+      "status": 200,
+      "coverage": "partial-company-distribution; not all JR East releases or PDF monitoring",
+      "candidateCount": 100,
+      "parserWarning": null
     },
     {
       "sourceId": "sagano",
       "url": "https://www.sagano-kanko.co.jp/",
-      "checkedAt": "2026-10-29T13:06:22+00:00",
+      "checkedAt": "2026-10-29T15:58:07+00:00",
       "status": 200,
+      "coverage": "configured-listing-only",
       "candidateCount": 5,
       "parserWarning": null
     }
@@ -22,15 +38,16 @@
   "sourceMonitors": [
     {
       "url": "https://www.jreast.co.jp/card/news/pdf/20261026.pdf",
-      "checkedAt": "2026-10-29T13:06:22+00:00",
+      "checkedAt": "2026-10-29T15:58:07+00:00",
       "status": "failed",
-      "sha256": null,
       "error": "HTTPError: HTTP Error 403: Forbidden",
+      "httpStatus": 403,
+      "sha256": null,
       "changed": null
     },
     {
       "url": "https://www.sagano-kanko.co.jp/cms/wp-content/uploads/2026/10/261023_1000_%E3%83%97%E3%83%AC%E3%82%B9%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9.pdf",
-      "checkedAt": "2026-10-29T13:06:22+00:00",
+      "checkedAt": "2026-10-29T15:58:07+00:00",
       "status": 200,
       "sha256": "45223d44881f791cc438bb6a39f1106cfa4618b2cbee95d3f3621b76c8c4d3f5",
       "changed": false,
@@ -39,18 +56,20 @@
     },
     {
       "url": "https://www.jreast.co.jp/press/2026/20261022_ho.pdf",
-      "checkedAt": "2026-10-29T13:06:22+00:00",
+      "checkedAt": "2026-10-29T15:58:07+00:00",
       "status": "failed",
-      "sha256": null,
       "error": "HTTPError: HTTP Error 403: Forbidden",
+      "httpStatus": 403,
+      "sha256": null,
       "changed": null
     },
     {
       "url": "https://www.jreast.co.jp/press/2026/winterextratrain/",
-      "checkedAt": "2026-10-29T13:06:22+00:00",
+      "checkedAt": "2026-10-29T15:58:07+00:00",
       "status": "failed",
-      "sha256": null,
       "error": "HTTPError: HTTP Error 403: Forbidden",
+      "httpStatus": 403,
+      "sha256": null,
       "changed": null
     }
   ],
@@ -64,13 +83,23 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-29T13:06:22+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
       "priority": "S",
       "priorityReason": "緊急・重大の可能性を示す語を検出。公式本文の確認が必要",
       "status": "candidate",
       "bodyVerified": false,
       "autoPublish": false,
-      "sourceListedDate": "2026-10-23"
+      "sourceListedDate": "2026-10-23",
+      "sourceDateBasis": "listing-hint",
+      "maxListedAgeDays": null,
+      "sourceObservations": [
+        {
+          "sourceId": "sagano",
+          "url": "https://www.sagano-kanko.co.jp/news/5590/",
+          "sourceListedDate": "2026-10-23",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
     },
     {
       "id": "10221c302287e8df83b4",
@@ -81,13 +110,725 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-29T13:06:22+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
       "priority": "A",
       "priorityReason": "予定・予約・利用条件に関わる語を検出",
       "status": "candidate",
       "bodyVerified": false,
       "autoPublish": false,
-      "sourceListedDate": "2026-10-23"
+      "sourceListedDate": "2026-10-23",
+      "sourceDateBasis": "listing-hint",
+      "maxListedAgeDays": null,
+      "sourceObservations": [
+        {
+          "sourceId": "sagano",
+          "url": "https://www.sagano-kanko.co.jp/news/5535/",
+          "sourceListedDate": "2026-10-23",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "422d01395f8bb2be4b19",
+      "title": "「タッチでGo！新幹線でGo！Go！Go！冬の超ポイントキャンペーン」を実施します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001561.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-27",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001561.000017557.html",
+          "sourceListedDate": "2026-10-27",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "95302f310df4d1741ed9",
+      "title": "「ビューカードでSuicaチャージしようキャンペーン！」を実施します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001560.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-26",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001560.000017557.html",
+          "sourceListedDate": "2026-10-26",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "5c813ec970f5f0eb4b02",
+      "title": "モバイルSuica × ヘラルボニー キャンペーン",
+      "url": "https://prtimes.jp/main/html/rd/p/000001559.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-23",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001559.000017557.html",
+          "sourceListedDate": "2026-10-23",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "92ce5bb90462918e9b43",
+      "title": "「やめましょう、歩きスマホ。」キャンペーンの実施について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001556.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-22",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001556.000017557.html",
+          "sourceListedDate": "2026-10-22",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "c44bf8ec56144665afef",
+      "title": "「teppay」のテレビCMとキャンペーンが始まります！～モバイルSuicaの新コード決済サービス「teppay」が本日スタート～",
+      "url": "https://prtimes.jp/main/html/rd/p/000001553.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-20",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001553.000017557.html",
+          "sourceListedDate": "2026-10-20",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "58ab088e03cf276f0b71",
+      "title": "JRE BANK口座で「新規のお客さまも対象！円普通預金残高を増やして現金3,000万円山分けキャンペーン」を実施します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001541.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-02",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001541.000017557.html",
+          "sourceListedDate": "2026-10-02",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "dda6f0bebe2cf6b74934",
+      "title": "「行きたい 食べたい 日本海！」キャンペーンについて",
+      "url": "https://prtimes.jp/main/html/rd/p/000001539.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-01",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001539.000017557.html",
+          "sourceListedDate": "2026-10-01",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "63336900512d694cffea",
+      "title": "しまった！の前に、しまおう。線路内落とし物防止キャンペーンの実施について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001534.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-28",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001534.000017557.html",
+          "sourceListedDate": "2026-09-28",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "1a2a66f5e92abc0faea7",
+      "title": "「Suicaのペンギン ありがとう！～Suica電子マネーを使ってグッズ＆ポイントプレゼント～」キャンペーンを実施します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001533.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-25",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001533.000017557.html",
+          "sourceListedDate": "2026-09-25",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "3f6a588f50fad6845382",
+      "title": "＼ご好評につき追加設定！／「特別設定 えきねっと限定 大人の休日パス スペシャル」を発売します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001529.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-24",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001529.000017557.html",
+          "sourceListedDate": "2026-09-24",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "8a7ad14937e7d9bbf2e3",
+      "title": "「秋の乗り放題パス」および「秋の乗り放題パス北海道新幹線オプション券」の発売について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001512.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-31",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001512.000017557.html",
+          "sourceListedDate": "2026-08-31",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "e0e45d4c640b39509e38",
+      "title": "JRE POINTが最大3.5%貯まる対象カードのご利用でさらにおトクなキャンペーンを開催！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001509.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-28",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001509.000017557.html",
+          "sourceListedDate": "2026-08-28",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "d8b204012e25ebd277b2",
+      "title": "おかげさまでSuicaは25周年！ご愛顧に感謝して各種キャンペーンを実施します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001508.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-26",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001508.000017557.html",
+          "sourceListedDate": "2026-08-26",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "17e61d06b56a6f271cca",
+      "title": "「モバイルSuica×名探偵コナンキャンペーン」を実施します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001506.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-24",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001506.000017557.html",
+          "sourceListedDate": "2026-08-24",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "31b741471d3d9e2729ea",
+      "title": "「声かけ・サポート」運動 強化キャンペーンの実施について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001504.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-21",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001504.000017557.html",
+          "sourceListedDate": "2026-08-21",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ba6e19289bf132561ab9",
+      "title": "povo、新幹線eチケット利用で、3時間のデータ使い放題をプレゼントするキャンペーンを実施",
+      "url": "https://prtimes.jp/main/html/rd/p/000001499.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-18",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001499.000017557.html",
+          "sourceListedDate": "2026-08-18",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "e920c3faafa85aa60eba",
+      "title": "「えきねっと」で発売するWEB限定割引商品の発売・見直し等について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001496.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-07",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001496.000017557.html",
+          "sourceListedDate": "2026-08-07",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ad4cac602b34376ec021",
+      "title": "カラフルピーチ×JR東日本 タイアップキャンペーンを実施します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001494.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-06",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001494.000017557.html",
+          "sourceListedDate": "2026-08-06",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "9bf47d32218eb3cbc8da",
+      "title": "大人の休日倶楽部会員さま限定 JRE BANK口座開設キャンペーン",
+      "url": "https://prtimes.jp/main/html/rd/p/000001492.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-03",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001492.000017557.html",
+          "sourceListedDate": "2026-08-03",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "937b3b57169b4a5116d1",
+      "title": "「モバイルSuica」で新たにりんかい線区間のみの定期券を発売します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001485.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-27",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001485.000017557.html",
+          "sourceListedDate": "2026-07-27",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "e22b7ec17a8af595e450",
+      "title": "「モバイルSuica」で新たにニューシャトル区間のみの定期券を発売します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001486.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-27",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001486.000017557.html",
+          "sourceListedDate": "2026-07-27",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "f75448aeb8c6cb41c11f",
+      "title": "アニメ「ハイキュー!!」×JR東日本「ようこそ仙台!!」キャンペーンを実施します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001479.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-22",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001479.000017557.html",
+          "sourceListedDate": "2026-07-22",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ce45ba62d792abc3bc8a",
+      "title": "「乃木坂46真夏の全国ツアー2026」×JR東日本TRAINキャンペーンを実施します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001470.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-13",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001470.000017557.html",
+          "sourceListedDate": "2026-07-13",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "dd3d6158093d342129b2",
+      "title": "「JRE IDつなげて当選率アップ！JRE POINTプレゼントキャンペーン」を実施します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001469.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-13",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001469.000017557.html",
+          "sourceListedDate": "2026-07-13",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "0c8c97bdd7ff6019a6a2",
+      "title": "エスカレーター「歩かず立ち止まろう」キャンペーンを7月21日（火）から実施します。",
+      "url": "https://prtimes.jp/main/html/rd/p/000001467.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-09",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001467.000017557.html",
+          "sourceListedDate": "2026-07-09",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ef6d9625fcbab0f57242",
+      "title": "0歳～18歳のかた限定！お子さまのJRE BANK口座開設キャンペーン",
+      "url": "https://prtimes.jp/main/html/rd/p/000001462.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-02",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "A",
+      "priorityReason": "予定・予約・利用条件に関わる語を検出",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001462.000017557.html",
+          "sourceListedDate": "2026-07-02",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
     },
     {
       "id": "49a5686c74d0c4d615e2",
@@ -115,13 +856,23 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-29T13:06:22+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
       "priority": "B",
       "priorityReason": "利用者向けの変更・イベント候補",
       "status": "candidate",
       "bodyVerified": false,
       "autoPublish": false,
-      "sourceListedDate": "2026-10-23"
+      "sourceListedDate": "2026-10-23",
+      "sourceDateBasis": "listing-hint",
+      "maxListedAgeDays": null,
+      "sourceObservations": [
+        {
+          "sourceId": "sagano",
+          "url": "https://www.sagano-kanko.co.jp/news/5599/",
+          "sourceListedDate": "2026-10-23",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
     },
     {
       "id": "622535ad4f9eb4179a86",
@@ -132,13 +883,23 @@
       "category": "鉄道・旅行",
       "sourcePublishedAt": null,
       "firstSeenAt": "2026-10-26T09:05:07+00:00",
-      "lastSeenAt": "2026-10-29T13:06:22+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
       "priority": "B",
       "priorityReason": "利用者向けの変更・イベント候補",
       "status": "candidate",
       "bodyVerified": false,
       "autoPublish": false,
-      "sourceListedDate": "2026-10-19"
+      "sourceListedDate": "2026-10-19",
+      "sourceDateBasis": "listing-hint",
+      "maxListedAgeDays": null,
+      "sourceObservations": [
+        {
+          "sourceId": "sagano",
+          "url": "https://www.sagano-kanko.co.jp/news/5461/",
+          "sourceListedDate": "2026-10-19",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
     },
     {
       "id": "6e170adca31a6f820fd0",
@@ -150,21 +911,2023 @@
       "sourcePublishedAt": null,
       "sourceListedDate": "2026-10-28",
       "firstSeenAt": "2026-10-28T01:08:20+00:00",
-      "lastSeenAt": "2026-10-29T13:06:22+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
       "priority": "B",
       "priorityReason": "利用者向けの変更・イベント候補",
       "status": "candidate",
       "bodyVerified": false,
-      "autoPublish": false
+      "autoPublish": false,
+      "sourceDateBasis": "listing-hint",
+      "maxListedAgeDays": null,
+      "sourceObservations": [
+        {
+          "sourceId": "sagano",
+          "url": "https://www.sagano-kanko.co.jp/news/5716/",
+          "sourceListedDate": "2026-10-28",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "60fcd24fdfb5e5370741",
+      "title": "冬の臨時列車の運転について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001558.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-22",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "B",
+      "priorityReason": "利用者向けの変更・イベント候補",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001558.000017557.html",
+          "sourceListedDate": "2026-10-22",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "de373981436a72b90e8c",
+      "title": "電気機関車EF64の運転業務や車両メンテナンス業務を疑似体験できる実証実験を実施します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001555.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-22",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "B",
+      "priorityReason": "利用者向けの変更・イベント候補",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001555.000017557.html",
+          "sourceListedDate": "2026-10-22",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "0df9d5d37a965411c335",
+      "title": "広域品川圏5駅を巡る体験型謎解きイベント「広域品川圏の歩き方」を開催！ ～一枚の謎の紙片から始まる、広域品川圏5駅を巡る冒険の旅～",
+      "url": "https://prtimes.jp/main/html/rd/p/000001522.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-09",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "B",
+      "priorityReason": "利用者向けの変更・イベント候補",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001522.000017557.html",
+          "sourceListedDate": "2026-09-09",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "54a50c1292024fe7794a",
+      "title": "「シルバーウィーク期間」の指定席予約状況のお知らせ",
+      "url": "https://prtimes.jp/main/html/rd/p/000001519.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-04",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "B",
+      "priorityReason": "利用者向けの変更・イベント候補",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001519.000017557.html",
+          "sourceListedDate": "2026-09-04",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "5c06061851a68d97512d",
+      "title": "千手発電所一般公開＆十日町すこやかファクトリー合同イベントを実施します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001515.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-03",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "B",
+      "priorityReason": "利用者向けの変更・イベント候補",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001515.000017557.html",
+          "sourceListedDate": "2026-09-03",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "d84fef27e53d2b08801d",
+      "title": "秋の臨時列車の運転について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001503.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-21",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "B",
+      "priorityReason": "利用者向けの変更・イベント候補",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001503.000017557.html",
+          "sourceListedDate": "2026-08-21",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "64670179b9dd4571b746",
+      "title": "軽井沢駅～中軽井沢駅～軽井沢千ヶ滝温泉間で自動運転バスの実証運行を2026年9月6日から実施します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001495.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-06",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "B",
+      "priorityReason": "利用者向けの変更・イベント候補",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001495.000017557.html",
+          "sourceListedDate": "2026-08-06",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "cc161ecb2b8387710eaf",
+      "title": "「お盆期間」の指定席予約状況のお知らせ",
+      "url": "https://prtimes.jp/main/html/rd/p/000001482.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-24",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "B",
+      "priorityReason": "利用者向けの変更・イベント候補",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001482.000017557.html",
+          "sourceListedDate": "2026-07-24",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "2cfe6de65d9455f489a7",
+      "title": "高速鉄道向け安全設備の国際的な業界規格がUIC 優秀出版賞を受賞",
+      "url": "https://prtimes.jp/main/html/rd/p/000001562.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-27",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001562.000017557.html",
+          "sourceListedDate": "2026-10-27",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "cb6c6e39c653b9b21bb3",
+      "title": "JR東日本、西武鉄道、ハリー・ポッター スタジオツアー東京の三者で連携した施策の第二弾を実施します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001554.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-27",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001554.000017557.html",
+          "sourceListedDate": "2026-10-27",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "4248f3c103bb42a94eea",
+      "title": "JR東日本スタートアッププログラム2026春の採択企業について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001552.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-19",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001552.000017557.html",
+          "sourceListedDate": "2026-10-19",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "1f47a1a5bc33190195da",
+      "title": "AI・IoT・清掃ロボットを活用した駅舎清掃DXの実証実験を実施します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001551.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-16",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001551.000017557.html",
+          "sourceListedDate": "2026-10-16",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "431349e1c61d30200798",
+      "title": "「2026年度 グッドデザイン賞」の受賞について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001550.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-15",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001550.000017557.html",
+          "sourceListedDate": "2026-10-15",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "c27ddce2cff1527be2d7",
+      "title": "鉄道事業者7社 QR乗車券のサービス開始について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001549.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-13",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001549.000017557.html",
+          "sourceListedDate": "2026-10-13",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "4d79d31dd5082c707c6b",
+      "title": "総務省の令和8年度「ワット・ビット連携関連実証」に着手しました",
+      "url": "https://prtimes.jp/main/html/rd/p/000001548.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-08",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001548.000017557.html",
+          "sourceListedDate": "2026-10-08",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "71c9176fc59ab42ac4f7",
+      "title": "「WaaS Future EXPO 2026 with Hitotsubashi Univ.」開催のご案内",
+      "url": "https://prtimes.jp/main/html/rd/p/000001547.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-08",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001547.000017557.html",
+          "sourceListedDate": "2026-10-08",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "2e4d9862937cd2eff28b",
+      "title": "JR東日本スタートアッププログラム2026秋募集を開始します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001546.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-08",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001546.000017557.html",
+          "sourceListedDate": "2026-10-08",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "68dd73609b11a9f40501",
+      "title": "「TRAIN SUITE 四季島」2027年7～9月出発分の申込受付開始について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001545.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-07",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001545.000017557.html",
+          "sourceListedDate": "2026-10-07",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "283f33447bb39632dad7",
+      "title": "WaaS共創コンソーシアムが地域課題解決に貢献します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001544.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-06",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001544.000017557.html",
+          "sourceListedDate": "2026-10-06",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "57d83eb26719b51eb614",
+      "title": "Suica利用は2万円というこれまでの当たり前を超えます",
+      "url": "https://prtimes.jp/main/html/rd/p/000001542.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-06",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001542.000017557.html",
+          "sourceListedDate": "2026-10-06",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "bf474d9170779798b8f7",
+      "title": "「100年先の心豊かさを創造する実験場」がいよいよ始動",
+      "url": "https://prtimes.jp/main/html/rd/p/000001543.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-06",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001543.000017557.html",
+          "sourceListedDate": "2026-10-06",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ec3b6808c0de2ff79f06",
+      "title": "JR東日本旧秋田住吉町社宅4号棟を活用した「音漏れapartmentマーケット2026」を実施します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001540.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-01",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001540.000017557.html",
+          "sourceListedDate": "2026-10-01",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "2a560eac15d7305dd858",
+      "title": "JR発足40周年記念ロゴマークの決定について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001538.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-10-01",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001538.000017557.html",
+          "sourceListedDate": "2026-10-01",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "0c9cdef9d22f336d7aa8",
+      "title": "たのしむ、やすらぐ、つながる。武蔵境の新たな交流拠点の創出へ。",
+      "url": "https://prtimes.jp/main/html/rd/p/000001537.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-30",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001537.000017557.html",
+          "sourceListedDate": "2026-09-30",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "e5ad054045bff66676fa",
+      "title": "逗子の海と山を感じる駅前にふさわしい新たなまちのシンボルとなる「（仮称）逗子駅ビル」の建設工事に着手します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001535.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-29",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001535.000017557.html",
+          "sourceListedDate": "2026-09-29",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "209ff75173b4df2a4fdd",
+      "title": "「地球益ショールーム ～未来のマテリアル・エネルギー編～」を開催",
+      "url": "https://prtimes.jp/main/html/rd/p/000001530.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-25",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001530.000017557.html",
+          "sourceListedDate": "2026-09-25",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "372ee0f883c329d57a4e",
+      "title": "推し駅弁に投票せよ！「駅弁味の陣2026」を開催します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001528.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-24",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001528.000017557.html",
+          "sourceListedDate": "2026-09-24",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ce2817437b727248fab7",
+      "title": "「グランクラス（飲料・軽食あり）」でリフレッシュメントの秋メニューを提供します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001527.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-18",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001527.000017557.html",
+          "sourceListedDate": "2026-09-18",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "c0a0b28235f18ceffdb1",
+      "title": "JR東日本伊藤忠不動産開発株式会社の発足（予定）について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001526.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-17",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001526.000017557.html",
+          "sourceListedDate": "2026-09-17",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "6326032f78f1579b630e",
+      "title": "「JR東日本グループレポート2026（統合報告書）」の発行について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001525.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-17",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001525.000017557.html",
+          "sourceListedDate": "2026-09-17",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "66878ccb75133f2b86ef",
+      "title": "大人の休日倶楽部presents 『歌舞伎舞踊特別公演in仙台八代目尾上菊五郎・六代目尾上菊之助出演』を開催します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001524.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-16",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001524.000017557.html",
+          "sourceListedDate": "2026-09-16",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "12104102ab6dac56bd80",
+      "title": "JR新宿駅東口駅前広場から、アートプロジェクト始動！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001523.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-10",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001523.000017557.html",
+          "sourceListedDate": "2026-09-10",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "52efef80e6ebef4afdf3",
+      "title": "Suicaの新たなイメージキャラクターの誕生 ～お客さまによる選考投票をスタートします～",
+      "url": "https://prtimes.jp/main/html/rd/p/000001521.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-08",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001521.000017557.html",
+          "sourceListedDate": "2026-09-08",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "72ac8e86986b9e9ab8ab",
+      "title": "「Suica Renaissance」 第5弾",
+      "url": "https://prtimes.jp/main/html/rd/p/000001520.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-08",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001520.000017557.html",
+          "sourceListedDate": "2026-09-08",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "5d636a85fbb29647ae66",
+      "title": "GREEN×EXPO 2027開催までまもなく半年！ラッピング新幹線の運行をはじめます！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001517.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-03",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001517.000017557.html",
+          "sourceListedDate": "2026-09-03",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "8b6fee993f0a16dc8d71",
+      "title": "大人の休日倶楽部会員等を対象に関係人口創出のための実証実験を実施します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001516.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-03",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001516.000017557.html",
+          "sourceListedDate": "2026-09-03",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "2a430ff3929f2c3323ed",
+      "title": "JR東日本社員撮影カレンダーを販売します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001514.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-02",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001514.000017557.html",
+          "sourceListedDate": "2026-09-02",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "f5e485be3458ed4681d3",
+      "title": "東京都のクラスター創成事業「TIB CATAPULT」にJR東日本が代表企業を務めるクラスターが採択",
+      "url": "https://prtimes.jp/main/html/rd/p/000001513.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-09-01",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001513.000017557.html",
+          "sourceListedDate": "2026-09-01",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "7aac514244347cafe602",
+      "title": "TAKANAWA GATEWAY CITYで初開催！「TAKANAWA GATEWAY CITY SWIM & RUN FESTA 2026」",
+      "url": "https://prtimes.jp/main/html/rd/p/000001511.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-28",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001511.000017557.html",
+          "sourceListedDate": "2026-08-28",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "79f741836c8bdb01e348",
+      "title": "JR東日本豊里創生株式会社初となる事業承継を開始します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001510.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-28",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001510.000017557.html",
+          "sourceListedDate": "2026-08-28",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "6df2c2a2e0ace6d9b7f0",
+      "title": "基幹インフラを支えるエネルギー分野の人材育成・創出に向けた包括連携協定を締結",
+      "url": "https://prtimes.jp/main/html/rd/p/000001507.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-25",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001507.000017557.html",
+          "sourceListedDate": "2026-08-25",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "7087aee018f81c9ec232",
+      "title": "広域品川圏エリアで『美酒巡礼』",
+      "url": "https://prtimes.jp/main/html/rd/p/000001501.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-18",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001501.000017557.html",
+          "sourceListedDate": "2026-08-18",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "6181ca644d7a14b11baf",
+      "title": "「京都フュージョニアリング株式会社」への出資について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001505.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-24",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001505.000017557.html",
+          "sourceListedDate": "2026-08-24",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "a2d68009c0e086345e76",
+      "title": "フレンチの技と感性を生かしたオリジナル洋食メニューが「サフィール踊り子」に登場！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001502.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-19",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001502.000017557.html",
+          "sourceListedDate": "2026-08-19",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "615c22249875c1b0f72b",
+      "title": "一橋大学において実施中のJR東日本寄附講義に新たな講義を開講します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001500.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-18",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001500.000017557.html",
+          "sourceListedDate": "2026-08-18",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "858563788a5ff7998107",
+      "title": "お盆期間のご利用状況",
+      "url": "https://prtimes.jp/main/html/rd/p/000001498.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-17",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001498.000017557.html",
+          "sourceListedDate": "2026-08-17",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "e001a6e3c1d4a7f8d4f1",
+      "title": "NEDO事業「競争的な水素サプライチェーン構築に向けた技術開発事業」における「社会実装に向けた次世代水素燃料電池鉄道車両の開発」の採択について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001497.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-07",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001497.000017557.html",
+          "sourceListedDate": "2026-08-07",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "fb3f020e2cf5676f7c41",
+      "title": "広畑バイオマス発電所がJR東日本へバーチャルPPAにより環境価値を提供",
+      "url": "https://prtimes.jp/main/html/rd/p/000001493.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-08-05",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001493.000017557.html",
+          "sourceListedDate": "2026-08-05",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "0f23bce3bf2ca0164e44",
+      "title": "「えきねっとQチケ」がJR東日本全エリアでご利用可能になります",
+      "url": "https://prtimes.jp/main/html/rd/p/000001490.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-30",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001490.000017557.html",
+          "sourceListedDate": "2026-07-30",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "c949a6d43a5470f7873c",
+      "title": "JR４社・JALが巡礼・精神文化をつなぐ新たな広域観光の取り組みを開始",
+      "url": "https://prtimes.jp/main/html/rd/p/000001491.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-30",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001491.000017557.html",
+          "sourceListedDate": "2026-07-30",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "8588a2e8eef65c7348cf",
+      "title": "「こまち号で過ごすスペシャルナイトin秋田駅」を開催します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001489.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-29",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001489.000017557.html",
+          "sourceListedDate": "2026-07-29",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "2984a09db18e9d3b988b",
+      "title": "「新幹線で過ごすプレミアムタイムin新青森」を開催します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001488.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-29",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001488.000017557.html",
+          "sourceListedDate": "2026-07-29",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "b17818f83addfdad6687",
+      "title": "＜浜松町駅周辺開発に携わる共創型まちづくり組織による地域課題解決の取り組み＞東京ベイエリアの賑わい創出に向けた取り組みを開始",
+      "url": "https://prtimes.jp/main/html/rd/p/000001487.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-28",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001487.000017557.html",
+          "sourceListedDate": "2026-07-28",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "8877a4343f35432e86f8",
+      "title": "「えきねっと」で精神障害者割引乗車券をお申込みいただけるサービスを開始します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001484.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-27",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001484.000017557.html",
+          "sourceListedDate": "2026-07-27",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "c79fc751068575bdf3f0",
+      "title": "「みんなが贈りたい。JR東日本おみやげグランプリ2026」結果発表！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001483.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-27",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001483.000017557.html",
+          "sourceListedDate": "2026-07-27",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "1a98cfc708a87637990e",
+      "title": "Google Pixel Watch、Samsung Galaxy Watchにて定期券やSuicaグリーン券、おトクなきっぷが便利にご利用できるようになります！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001481.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-23",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001481.000017557.html",
+          "sourceListedDate": "2026-07-23",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "fe3cfb509edd8ee6b9cd",
+      "title": "「TRAIN SUITE 四季島」春～秋コースのリニューアルおよび2027年4～6月出発分の申込受付開始ならびに料理監修の体制変更について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001480.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-22",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001480.000017557.html",
+          "sourceListedDate": "2026-07-22",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "f19cbed2960924bb22b3",
+      "title": "JR東日本・西武鉄道・ワーナー ブラザース スタジオツアー東京の三者で連携した施策を実施します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001478.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-21",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001478.000017557.html",
+          "sourceListedDate": "2026-07-21",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "9d989650b0388d75cc2d",
+      "title": "新幹線専用検測車を更新し、より安全で安心の高速輸送サービスを実現します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001472.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-14",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001472.000017557.html",
+          "sourceListedDate": "2026-07-14",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "31127e7c226655d6c4a2",
+      "title": "teppay加盟店（ユーザースキャン方式）のWEB申込受付を開始します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001477.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-17",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001477.000017557.html",
+          "sourceListedDate": "2026-07-17",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "40ad0e3816695978d3f3",
+      "title": "～推しがつなぐ、世界ひろがる～「すき旅」が始まります！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001476.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-16",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001476.000017557.html",
+          "sourceListedDate": "2026-07-16",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "d774b5b12b09ad692dbe",
+      "title": "「櫻坂46と、鉄道で旅しよう。」を実施します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001475.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-15",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001475.000017557.html",
+          "sourceListedDate": "2026-07-15",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "0e9eef133402cc4a393e",
+      "title": "「JRE手ぶら旅」でより豊かな移動時間を創出します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001471.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-14",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001471.000017557.html",
+          "sourceListedDate": "2026-07-14",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "4c665c8c7f8336de5632",
+      "title": "駅前広場をヒト中心の「にぎわい創出の空間」として開放します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001474.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-14",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001474.000017557.html",
+          "sourceListedDate": "2026-07-14",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "603566b6ba1027e8b816",
+      "title": "ゼロカーボンの取組みをさらに加速させます",
+      "url": "https://prtimes.jp/main/html/rd/p/000001473.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-14",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001473.000017557.html",
+          "sourceListedDate": "2026-07-14",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "c16d2e1e4efb0a7ba4a6",
+      "title": "体力を要する業界・企業向けのコンディション可視化・労災対策を支援する業務支援サービス「マモログ」をスタートします",
+      "url": "https://prtimes.jp/main/html/rd/p/000001468.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-10",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001468.000017557.html",
+          "sourceListedDate": "2026-07-10",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "22bbf7965b767d139a82",
+      "title": "東京大学と民間企業8社によるフュージョンエネルギーの社会連携講座にJR東日本が参画します",
+      "url": "https://prtimes.jp/main/html/rd/p/000001466.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-08",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001466.000017557.html",
+          "sourceListedDate": "2026-07-08",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "c9f2bfd71b84b2b0d776",
+      "title": "鉄道係員に対する暴力行為の件数・発生状況について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001465.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-06",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001465.000017557.html",
+          "sourceListedDate": "2026-07-06",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "9f8310e4deaf834810f2",
+      "title": "鉄道事業者共同でＰＲ「暴力行為防止ポスター『ＮＯ！暴力 人にグーで、人生パー！』」を７月１０日（金）から各事業者の駅構内、列車内に掲出します！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001464.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-06",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001464.000017557.html",
+          "sourceListedDate": "2026-07-06",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "a1742e4c5603c2a5d33b",
+      "title": "JR東日本グループ事業の再編について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001463.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-07-03",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001463.000017557.html",
+          "sourceListedDate": "2026-07-03",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "2abd9a13cbc43774a422",
+      "title": "平日夜の過ごし方を提案するナイトプログラム「Greater Shinagawa At 7 PM」広域品川圏で始動！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001460.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-06-29",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001460.000017557.html",
+          "sourceListedDate": "2026-06-29",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "4baaf50e33b54030b7d0",
+      "title": "みんなでつくる、いただきます。「JREこども食堂」実証実験を行います",
+      "url": "https://prtimes.jp/main/html/rd/p/000001459.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-06-29",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001459.000017557.html",
+          "sourceListedDate": "2026-06-29",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "0991874f9fd529aaa258",
+      "title": "おトクなビューカードが増えます！",
+      "url": "https://prtimes.jp/main/html/rd/p/000001458.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-06-29",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001458.000017557.html",
+          "sourceListedDate": "2026-06-29",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
+    },
+    {
+      "id": "f8f3d81e78acdefeb744",
+      "title": "新幹線における安全確保に向けた車内搭載品の充実について",
+      "url": "https://prtimes.jp/main/html/rd/p/000001457.000017557.html",
+      "sourceId": "jr-east-prtimes",
+      "sourceName": "JR東日本 公式配信（PR TIMES企業別RSS）",
+      "category": "交通",
+      "sourcePublishedAt": null,
+      "sourceListedDate": "2026-06-26",
+      "sourceDateBasis": "feed-hint",
+      "maxListedAgeDays": 30,
+      "firstSeenAt": "2026-10-29T15:58:07+00:00",
+      "lastSeenAt": "2026-10-29T15:58:07+00:00",
+      "priority": "C",
+      "priorityReason": "補足候補。対象と実用性を要確認",
+      "status": "candidate",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "sourceObservations": [
+        {
+          "sourceId": "jr-east-prtimes",
+          "url": "https://prtimes.jp/main/html/rd/p/000001457.000017557.html",
+          "sourceListedDate": "2026-06-26",
+          "lastSeenAt": "2026-10-29T15:58:07+00:00"
+        }
+      ]
     }
   ],
   "runs": [
-    {
-      "at": "2026-10-26T09:05:07+00:00",
-      "sourcesOk": 1,
-      "sourcesTotal": 2,
-      "newlySeen": 13
-    },
     {
       "at": "2026-10-26T09:12:37+00:00",
       "sourcesOk": 1,
@@ -338,6 +3101,13 @@
       "sourcesOk": 1,
       "sourcesTotal": 2,
       "newlySeen": 0
+    },
+    {
+      "at": "2026-10-29T15:58:07+00:00",
+      "sourcesOk": 2,
+      "sourcesTotal": 3,
+      "health": "degraded",
+      "newlySeen": 100
     }
   ]
 }
