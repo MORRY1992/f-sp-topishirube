@@ -9,7 +9,26 @@
       "^/press/[0-9]{4}/",
       "^/card/news/pdf/"
     ],
-    "category": "交通"
+    "category": "交通",
+    "listingDates": "jr-east-li"
+  },
+  {
+    "id": "jr-east-prtimes",
+    "name": "JR東日本 公式配信（PR TIMES企業別RSS）",
+    "url": "https://prtimes.jp/companyrdf.php?company_id=17557",
+    "kind": "rss",
+    "host": "prtimes.jp",
+    "pathPatterns": [
+      "^/main/html/rd/p/[0-9]{9}\\.000017557\\.html$"
+    ],
+    "category": "交通",
+    "feedChannelTitle": "東日本旅客鉄道株式会社【プレスリリース】 by PR TIMES",
+    "feedPublisher": "東日本旅客鉄道株式会社",
+    "maxListedAgeDays": 30,
+    "coverage": "partial-company-distribution; not all JR East releases or PDF monitoring",
+    "verifiedAt": "2026-10-30T00:53:00+09:00",
+    "verificationUrl": "https://prtimes.jp/main/html/rd/p/000001561.000017557.html",
+    "note": "会社概要のRSSリンクを照合し、通常HTTPで200・RSS1.0・配信企業・200項目を確認。最大100件を候補収集。JR東日本本体の取得障害は独立して記録。本文・画像・descriptionは保存・公開しない。"
   },
   {
     "id": "sagano",

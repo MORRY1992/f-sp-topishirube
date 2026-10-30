@@ -35,10 +35,18 @@ def date_value(value):
 
 
 def key(url):
-    p = urlsplit(url)
-    query = urlencode(sorted((k, v) for k, v in parse_qsl(p.query)
-                             if not k.lower().startswith('utm_') and k.lower() not in ('fbclid', 'gclid')))
-    return urlunsplit((p.scheme.lower(), p.netloc.lower(), unquote(p.path).rstrip('/'), query, ''))
+    """Canonical HTTPS URL; tracking fragments, credentials and invalid URLs are excluded."""
+    try:
+        p = urlsplit(url)
+        if p.scheme.lower() != 'https' or not p.hostname or p.username or p.password:
+            return ''
+        query = urlencode(sorted(
+            (k, v) for k, v in parse_qsl(p.query, keep_blank_values=True)
+            if not k.lower().startswith('utm_') and k.lower() not in ('fbclid', 'gclid')
+        ))
+        return urlunsplit(('https', p.netloc.lower(), unquote(p.path).rstrip('/'), query, ''))
+    except (ValueError, TypeError, AttributeError):
+        return ''
 
 
 def text(value):
@@ -73,9 +81,9 @@ def article_topic(article):
 
 
 def related_articles(item, articles):
-    urls = [item['url']] + item.get('alternateUrls', [])
-    keys = {key(u) for u in urls}
-    hosts = {urlsplit(u).hostname for u in urls}
+    urls = [item.get('url')] + (item.get('alternateUrls') or [])
+    keys = {k for u in urls if (k := key(u))}
+    hosts = {urlsplit(u).hostname for u in urls if key(u)}
     candidate = grams(topic_text(item.get('title', '')))
     matches = []
     for article in articles:
@@ -95,6 +103,22 @@ def related_articles(item, articles):
                             'confidence': 'possible-related-event', 'titleCoverage': round(coverage, 3),
                             'sharedBigrams': sorted(shared)[:30]})
     return matches
+
+
+def reviewed_topics(index, article_ids):
+    """Only explicit reviewed aliases to existing articles can suppress a new item."""
+    result = {}
+    for topic in (index or {}).get('topics', [])[:500]:
+        if not isinstance(topic, dict) or not stamp(topic.get('reviewedAt')):
+            continue
+        ids = sorted(set(topic.get('articleIds', [])) & article_ids)
+        if not ids:
+            continue
+        for url in topic.get('sourceUrls', [])[:20]:
+            canonical = key(url)
+            if canonical:
+                result.setdefault(canonical, []).append({**topic, 'articleIds': ids})
+    return result
 
 
 SHORT_LIVED = re.compile(r'運休|運転見合わせ|運行見合わせ|運転変更|運行変更|運転について|運行について|運転再開|運行再開|通常運転|遅延|通行止め|臨時休業')
@@ -161,7 +185,7 @@ def relevance(item, today):
             'basis': 'headline-with-announcement-year-hint' if inferred else 'headline-explicit-date-hint'}
 
 
-def prepare(queue, articles, now=None):
+def prepare(queue, articles, now=None, topic_index=None):
     now = now or dt.datetime.now(UTC)
     collected = stamp(queue.get('collectedAt'))
     age = (now - collected).total_seconds() if collected else None
@@ -174,26 +198,64 @@ def prepare(queue, articles, now=None):
     for a in articles:
         for s in a.get('sources', []):
             published.setdefault(key(s['url']), []).append(a['id'])
+    topics = reviewed_topics(topic_index, {a['id'] for a in articles})
+    for url, records in topics.items():
+        published.setdefault(url, []).extend(aid for topic in records for aid in topic['articleIds'])
     source_ok = {s['sourceId'] for s in healthy}
     monitors = queue.get('sourceMonitors', [])[:8]
     work, covered, updates, held = [], [], [], []
     by_id = {a['id']: a for a in articles}
     for item in queue.get('candidates', [])[:500]:
         matches = related_articles(item, articles)
-        ids = sorted(m['articleId'] for m in matches)
+        candidate_urls = [item.get('url')] + (item.get('alternateUrls') or [])
+        canonical_urls = {k for u in candidate_urls if (k := key(u))}
+        known_topics = [topic for url in canonical_urls for topic in topics.get(url, [])]
+        alias_ids = {aid for topic in known_topics for aid in topic['articleIds']}
+        for aid in sorted(alias_ids):
+            existing = next((match for match in matches if match['articleId'] == aid), None)
+            if existing is None:
+                matches.append({'articleId': aid, 'basis': 'reviewed-alias-url',
+                                'confidence': 'reviewed-topic-alias'})
+            elif existing['basis'] == 'same-official-host-and-topic':
+                existing.update(basis='reviewed-alias-url', confidence='reviewed-topic-alias')
+        ids = sorted({match['articleId'] for match in matches})
         entry = {k: item.get(k) for k in ('id', 'title', 'url', 'sourceId', 'priority', 'firstSeenAt', 'lastSeenAt', 'sourceListedDate', 'sourcePublishedAt')}
         entry.update(bodyVerified=False, autoPublish=False, operationalStatus='unknown')
         announcement = date_value(item.get('sourcePublishedAt'))
         entry['announcementDate'] = announcement.isoformat() if announcement else None
         entry['announcementDateStatus'] = 'source-reported-unverified' if announcement else 'unknown'
-        entry['dateStatus'] = 'listing-hint-only' if entry['sourceListedDate'] else 'unknown'
+        entry['dateStatus'] = (('feed-hint-only' if item.get('sourceDateBasis') == 'feed-hint'
+                                else 'listing-hint-only') if entry['sourceListedDate'] else 'unknown')
         entry['relevance'] = relevance(item, now.astimezone(JST).date())
         entry['requiredChecks'] = ['official-body', 'announcement-date', 'target-and-exceptions', 'event-still-relevant', 'duplicate-topic', 'reader-value', 'image-rights']
         if matches:
             entry.update(articleIds=ids, matchEvidence=matches)
         seen = stamp(item.get('lastSeenAt'))
-        if not fresh or item.get('sourceId') not in source_ok or not seen or not -300 <= (now-seen).total_seconds() <= MAX_AGE:
+        observations = item.get('sourceObservations') or [
+            {field: item.get(field) for field in ('sourceId', 'url', 'lastSeenAt')}
+        ]
+        evidence = []
+        for observed in observations[:16]:
+            if not isinstance(observed, dict):
+                continue
+            observed_time = stamp(observed.get('lastSeenAt'))
+            if (observed.get('sourceId') in source_ok
+                    and key(observed.get('url')) in canonical_urls
+                    and observed_time
+                    and -300 <= (now - observed_time).total_seconds() <= MAX_AGE):
+                evidence.append(observed)
+        if not fresh or not evidence or not seen or not -300 <= (now-seen).total_seconds() <= MAX_AGE:
             held.append({**entry, 'reason': 'stale-or-unavailable-source; direct official retrieval required'})
+            continue
+        entry['collectionEvidence'] = evidence[:8]
+        today = now.astimezone(JST).date()
+        listed = date_value(item.get('sourceListedDate'))
+        if listed and listed > today:
+            held.append({**entry, 'reason': 'future-listed-date; official date verification required'})
+            continue
+        max_age = item.get('maxListedAgeDays')
+        if listed and type(max_age) is int and max_age >= 0 and (today-listed).days > max_age:
+            held.append({**entry, 'reason': 'old-listed-item; rediscovery is not a new announcement'})
             continue
         temporal = entry['relevance']['status']
         if temporal in ('past-target-hint', 'unknown-target', 'open-or-recurring-target'):
@@ -215,8 +277,16 @@ def prepare(queue, articles, now=None):
                 signals.append('newer-announcement-hint')
             if changed:
                 signals.append('source-hash-change-needs-body-comparison')
-            if any(m['basis'] != 'source-url' for m in matches):
+            if any(m['basis'] == 'same-official-host-and-topic' for m in matches):
                 signals.append('different-url-related-topic-needs-comparison')
+            for topic in known_topics:
+                baseline = topic.get('listingTitle')
+                current_date = date_value(item.get('sourceListedDate'))
+                previous_date = date_value(topic.get('sourceListedDate'))
+                if ((baseline and headline(item.get('title')) != headline(baseline))
+                        or (current_date and previous_date and current_date > previous_date)):
+                    signals.append('reviewed-topic-listing-changed')
+                    break
             if re.search(r'続報|追加|変更|訂正|延期|中止|延長|発売|予約|料金|決定', headline(item.get('title', ''))):
                 signals.append('possible-material-detail-in-headline')
             # Exact URL matches still require comparison: a URL can gain new facts in place.
@@ -254,9 +324,12 @@ if __name__ == '__main__':
     p = argparse.ArgumentParser()
     p.add_argument('--queue', type=Path, required=True)
     p.add_argument('--articles', type=Path, default=ROOT/'content/articles.json')
+    p.add_argument('--topics', type=Path, default=ROOT/'content/topic-index.json')
     p.add_argument('--output', type=Path, required=True)
     a = p.parse_args()
-    result = prepare(json.loads(a.queue.read_text()), json.loads(a.articles.read_text()))
+    topics = json.loads(a.topics.read_text()) if a.topics.exists() else {}
+    result = prepare(json.loads(a.queue.read_text()), json.loads(a.articles.read_text()),
+                     topic_index=topics)
     a.output.parent.mkdir(parents=True, exist_ok=True)
     a.output.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
     print(json.dumps({'health': result['health']['status'], **result['counts']}, ensure_ascii=False))
