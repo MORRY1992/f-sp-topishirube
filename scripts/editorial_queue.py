@@ -40,6 +40,7 @@ def key(url):
         p = urlsplit(url)
         if p.scheme.lower() != 'https' or not p.hostname or p.username or p.password:
             return ''
+        _port = p.port  # Reject malformed port strings.
         query = urlencode(sorted(
             (k, v) for k, v in parse_qsl(p.query, keep_blank_values=True)
             if not k.lower().startswith('utm_') and k.lower() not in ('fbclid', 'gclid')
@@ -227,9 +228,15 @@ def prepare(queue, articles, now=None, topic_index=None):
         entry['dateStatus'] = (('feed-hint-only' if item.get('sourceDateBasis') == 'feed-hint'
                                 else 'listing-hint-only') if entry['sourceListedDate'] else 'unknown')
         entry['relevance'] = relevance(item, now.astimezone(JST).date())
+        # Keep PR #4's compatible one-day title hint fields.
+        if (entry['relevance']['status'] in ('past-target-hint', 'dated-target-hint')
+                and entry['relevance']['targetStartDate'] == entry['relevance']['targetEndDate']):
+            entry['eventDateHint'] = entry['relevance']['targetEndDate']
+            entry['eventDateStatus'] = 'title-hint-only'
         entry['requiredChecks'] = ['official-body', 'announcement-date', 'target-and-exceptions', 'event-still-relevant', 'duplicate-topic', 'reader-value', 'image-rights']
         if matches:
-            entry.update(articleIds=ids, matchEvidence=matches)
+            entry.update(articleIds=ids, matchEvidence=matches,
+                         updateReviewRequired=True, possibleDuplicate=True)
         seen = stamp(item.get('lastSeenAt'))
         observations = item.get('sourceObservations') or [
             {field: item.get(field) for field in ('sourceId', 'url', 'lastSeenAt')}
@@ -287,7 +294,15 @@ def prepare(queue, articles, now=None, topic_index=None):
                         or (current_date and previous_date and current_date > previous_date)):
                     signals.append('reviewed-topic-listing-changed')
                     break
-            if re.search(r'続報|追加|変更|訂正|延期|中止|延長|発売|予約|料金|決定', headline(item.get('title', ''))):
+            # The unchanged wording of a reviewed alias is not a new update signal.
+            unchanged_reviewed_alias = any(
+                topic.get('listingTitle')
+                and headline(item.get('title')) == headline(topic['listingTitle'])
+                for topic in known_topics
+            )
+            if (not unchanged_reviewed_alias
+                    and re.search(r'続報|追加|変更|訂正|延期|中止|延長|発売|予約|料金|決定',
+                                  headline(item.get('title', '')))):
                 signals.append('possible-material-detail-in-headline')
             # Exact URL matches still require comparison: a URL can gain new facts in place.
             action = 'compare-official-body-and-update-existing-if-material'
