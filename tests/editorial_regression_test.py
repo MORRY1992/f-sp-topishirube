@@ -33,7 +33,7 @@ class EditorialRegressionTests(unittest.TestCase):
 
     def test_real_sagano_listing_and_published_pdf_are_one_topic(self):
         result = self.result(self.queue())
-        self.assertEqual(result['counts'], {'candidates': 1, 'actionable': 0, 'alreadyCovered': 1, 'held': 0})
+        self.assertEqual(result['counts'], {'candidates': 1, 'actionable': 0, 'alreadyCovered': 1, 'updateCandidates': 0, 'held': 0})
         self.assertEqual(result['alreadyCovered'][0]['articleIds'], ['sagano-new-train-202703'])
 
     def test_tracking_and_fragment_do_not_hide_known_alias(self):
@@ -47,8 +47,8 @@ class EditorialRegressionTests(unittest.TestCase):
 
     def test_changed_booking_conditions_on_same_url_require_update_review(self):
         result = self.result(self.queue(title='2026/10/28 新型トロッコの予約条件変更について', listed='2026-10-28'))
-        item = result['worklist'][0]
-        self.assertEqual(item['action'], 'review-existing-for-update')
+        item = result['updateCandidates'][0]
+        self.assertEqual(item['action'], 'compare-official-body-and-update-existing-if-material')
         self.assertTrue(item['updateReviewRequired'])
         self.assertEqual(item['articleIds'], ['sagano-new-train-202703'])
         self.assertFalse(item['autoPublish'])
@@ -57,7 +57,7 @@ class EditorialRegressionTests(unittest.TestCase):
 
     def test_new_listing_date_with_same_wording_also_requires_review(self):
         q = self.queue(listed='2026-10-28')
-        self.assertEqual(self.result(q)['worklist'][0]['action'], 'review-existing-for-update')
+        self.assertEqual(self.result(q)['updateCandidates'][0]['action'], 'compare-official-body-and-update-existing-if-material')
 
     def test_new_url_is_not_suppressed_by_similar_title(self):
         result = self.result(self.queue(url='https://www.sagano-kanko.co.jp/news/6000/'))
@@ -102,7 +102,12 @@ class EditorialRegressionTests(unittest.TestCase):
     def test_ongoing_disruption_is_not_treated_as_one_day_expiry(self):
         for phrase in ['10月23日から当面の間、運転見合わせ', '10月23日以降の長期間運休について']:
             q = self.queue(title='2026/10/23 '+phrase, url='https://www.sagano-kanko.co.jp/news/5603/')
-            self.assertEqual(len(self.result(q)['worklist']), 1)
+            result = self.result(q)
+            # Indefinite disruptions are not expired: current status remains unverified.
+            self.assertFalse(result['worklist'])
+            self.assertEqual(result['held'][0]['relevance']['status'],
+                             'open-or-recurring-target')
+            self.assertEqual(result['held'][0]['operationalStatus'], 'unknown')
 
     def test_december_listing_of_january_service_uses_next_year_hint(self):
         now = dt.datetime(2026, 12, 31, 14, tzinfo=dt.timezone.utc)
