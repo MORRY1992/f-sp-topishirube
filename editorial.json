@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "preparedAt": "2026-11-24T23:53:43+00:00",
-  "collectedAt": "2026-11-24T23:53:33+00:00",
+  "preparedAt": "2026-11-25T08:33:02+00:00",
+  "collectedAt": "2026-11-25T08:32:51+00:00",
   "health": {
     "status": "degraded",
-    "queueAgeSeconds": 10.194602,
+    "queueAgeSeconds": 11.795549,
     "sourcesOk": 2,
     "sourcesTotal": 3,
     "sourceFailures": [
       {
         "sourceId": "jr-east",
         "url": "https://www.jreast.co.jp/press/",
-        "checkedAt": "2026-11-24T23:53:33+00:00",
+        "checkedAt": "2026-11-25T08:32:51+00:00",
         "status": "failed",
         "error": "HTTPError: HTTP Error 403: Forbidden",
         "httpStatus": 403
@@ -20,7 +20,7 @@
     "monitorFailures": [
       {
         "url": "https://www.jreast.co.jp/card/news/pdf/20261026.pdf",
-        "checkedAt": "2026-11-24T23:53:33+00:00",
+        "checkedAt": "2026-11-25T08:32:51+00:00",
         "status": "failed",
         "error": "HTTPError: HTTP Error 403: Forbidden",
         "httpStatus": 403,
@@ -29,7 +29,7 @@
       },
       {
         "url": "https://www.jreast.co.jp/press/2026/20261022_ho.pdf",
-        "checkedAt": "2026-11-24T23:53:33+00:00",
+        "checkedAt": "2026-11-25T08:32:51+00:00",
         "status": "failed",
         "error": "HTTPError: HTTP Error 403: Forbidden",
         "httpStatus": 403,
@@ -38,7 +38,7 @@
       },
       {
         "url": "https://www.jreast.co.jp/press/2026/winterextratrain/",
-        "checkedAt": "2026-11-24T23:53:33+00:00",
+        "checkedAt": "2026-11-25T08:32:51+00:00",
         "status": "failed",
         "error": "HTTPError: HTTP Error 403: Forbidden",
         "httpStatus": 403,
@@ -57,7 +57,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-27",
       "bodyVerified": false,
       "autoPublish": false,
@@ -66,7 +66,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001561.000017557.html",
           "sourceListedDate": "2026-10-27",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -87,7 +87,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-26",
       "bodyVerified": false,
       "autoPublish": false,
@@ -96,7 +96,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001560.000017557.html",
           "sourceListedDate": "2026-10-26",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -117,7 +117,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-11-09T07:37:09+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-09",
       "bodyVerified": false,
       "autoPublish": false,
@@ -126,7 +126,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001566.000017557.html",
           "sourceListedDate": "2026-11-09",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -147,7 +147,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-11-11T07:26:18+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-11",
       "bodyVerified": false,
       "autoPublish": false,
@@ -156,7 +156,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001571.000017557.html",
           "sourceListedDate": "2026-11-11",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -177,7 +177,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-11-24T13:42:12+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-24",
       "bodyVerified": false,
       "autoPublish": false,
@@ -186,7 +186,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001579.000017557.html",
           "sourceListedDate": "2026-11-24",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -201,22 +201,22 @@
       "dateStatus": "feed-hint-only"
     },
     {
-      "id": "6e170adca31a6f820fd0",
-      "title": "2026/10/28 【お知らせ】各駅物販店舗及びジオラマ京都JAPAN 11月の営業について",
-      "url": "https://www.sagano-kanko.co.jp/news/5716/",
+      "id": "33cf09fd3c0c076608d8",
+      "title": "2026/11/25 【プレスリリース】嵯峨野トロッコ列車限定オリジナルNゲージ 『DE10機関車・SK客車６両フルセット（オリジナル特典付）』発売！",
+      "url": "https://www.sagano-kanko.co.jp/news/6057/",
       "sourceId": "sagano",
-      "priority": "B",
-      "firstSeenAt": "2026-10-28T01:08:20+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
-      "sourceListedDate": "2026-10-28",
+      "priority": "A",
+      "firstSeenAt": "2026-11-25T08:32:51+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
+      "sourceListedDate": "2026-11-25",
       "bodyVerified": false,
       "autoPublish": false,
       "collectionEvidence": [
         {
           "sourceId": "sagano",
-          "url": "https://www.sagano-kanko.co.jp/news/5716/",
-          "sourceListedDate": "2026-10-28",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "url": "https://www.sagano-kanko.co.jp/news/6057/",
+          "sourceListedDate": "2026-11-25",
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -237,7 +237,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "B",
       "firstSeenAt": "2026-11-04T07:27:22+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-04",
       "bodyVerified": false,
       "autoPublish": false,
@@ -246,7 +246,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001564.000017557.html",
           "sourceListedDate": "2026-11-04",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -267,7 +267,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "B",
       "firstSeenAt": "2026-11-09T07:37:09+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-09",
       "bodyVerified": false,
       "autoPublish": false,
@@ -276,7 +276,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001567.000017557.html",
           "sourceListedDate": "2026-11-09",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -297,7 +297,7 @@
       "sourceId": "sagano",
       "priority": "B",
       "firstSeenAt": "2026-11-19T02:34:10+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-19",
       "bodyVerified": false,
       "autoPublish": false,
@@ -306,7 +306,7 @@
           "sourceId": "sagano",
           "url": "https://www.sagano-kanko.co.jp/news/6066/",
           "sourceListedDate": "2026-11-19",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -327,7 +327,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "B",
       "firstSeenAt": "2026-11-20T11:38:41+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-20",
       "bodyVerified": false,
       "autoPublish": false,
@@ -336,7 +336,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001576.000017557.html",
           "sourceListedDate": "2026-11-20",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -349,6 +349,36 @@
         "image-rights"
       ],
       "dateStatus": "feed-hint-only"
+    },
+    {
+      "id": "18fb1a9ada9186f1886d",
+      "title": "2026/11/25 【プレスリリース】ありがとう そして新たな旅へ ～35 年間お疲れ様！初代トロッコ列車みんなで見送るラストラン～ イベント開催",
+      "url": "https://www.sagano-kanko.co.jp/news/6056/",
+      "sourceId": "sagano",
+      "priority": "B",
+      "firstSeenAt": "2026-11-25T08:32:51+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
+      "sourceListedDate": "2026-11-25",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "collectionEvidence": [
+        {
+          "sourceId": "sagano",
+          "url": "https://www.sagano-kanko.co.jp/news/6056/",
+          "sourceListedDate": "2026-11-25",
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
+        }
+      ],
+      "requiredChecks": [
+        "official-body",
+        "announcement-date",
+        "target-and-exceptions",
+        "event-still-relevant",
+        "duplicate-topic",
+        "reader-value",
+        "image-rights"
+      ],
+      "dateStatus": "listing-hint-only"
     }
   ],
   "alreadyCovered": [
@@ -390,7 +420,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-23",
       "bodyVerified": false,
       "autoPublish": false,
@@ -399,7 +429,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001559.000017557.html",
           "sourceListedDate": "2026-10-23",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -411,7 +441,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-22",
       "bodyVerified": false,
       "autoPublish": false,
@@ -420,7 +450,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001556.000017557.html",
           "sourceListedDate": "2026-10-22",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -432,7 +462,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-20",
       "bodyVerified": false,
       "autoPublish": false,
@@ -441,7 +471,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001553.000017557.html",
           "sourceListedDate": "2026-10-20",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -453,7 +483,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-02",
       "bodyVerified": false,
       "autoPublish": false,
@@ -462,7 +492,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001541.000017557.html",
           "sourceListedDate": "2026-10-02",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -474,7 +504,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-01",
       "bodyVerified": false,
       "autoPublish": false,
@@ -483,7 +513,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001539.000017557.html",
           "sourceListedDate": "2026-10-01",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -495,7 +525,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-28",
       "bodyVerified": false,
       "autoPublish": false,
@@ -504,7 +534,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001534.000017557.html",
           "sourceListedDate": "2026-09-28",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -516,7 +546,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-25",
       "bodyVerified": false,
       "autoPublish": false,
@@ -525,7 +555,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001533.000017557.html",
           "sourceListedDate": "2026-09-25",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -537,7 +567,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-24",
       "bodyVerified": false,
       "autoPublish": false,
@@ -546,7 +576,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001529.000017557.html",
           "sourceListedDate": "2026-09-24",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -558,7 +588,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-31",
       "bodyVerified": false,
       "autoPublish": false,
@@ -567,7 +597,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001512.000017557.html",
           "sourceListedDate": "2026-08-31",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -579,7 +609,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-28",
       "bodyVerified": false,
       "autoPublish": false,
@@ -588,7 +618,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001509.000017557.html",
           "sourceListedDate": "2026-08-28",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -600,7 +630,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-26",
       "bodyVerified": false,
       "autoPublish": false,
@@ -609,7 +639,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001508.000017557.html",
           "sourceListedDate": "2026-08-26",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -621,7 +651,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-24",
       "bodyVerified": false,
       "autoPublish": false,
@@ -630,7 +660,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001506.000017557.html",
           "sourceListedDate": "2026-08-24",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -642,7 +672,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-21",
       "bodyVerified": false,
       "autoPublish": false,
@@ -651,7 +681,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001504.000017557.html",
           "sourceListedDate": "2026-08-21",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -663,7 +693,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-18",
       "bodyVerified": false,
       "autoPublish": false,
@@ -672,7 +702,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001499.000017557.html",
           "sourceListedDate": "2026-08-18",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -684,7 +714,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-07",
       "bodyVerified": false,
       "autoPublish": false,
@@ -693,7 +723,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001496.000017557.html",
           "sourceListedDate": "2026-08-07",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -705,7 +735,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-06",
       "bodyVerified": false,
       "autoPublish": false,
@@ -714,7 +744,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001494.000017557.html",
           "sourceListedDate": "2026-08-06",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -726,7 +756,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-03",
       "bodyVerified": false,
       "autoPublish": false,
@@ -735,7 +765,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001492.000017557.html",
           "sourceListedDate": "2026-08-03",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -747,7 +777,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-27",
       "bodyVerified": false,
       "autoPublish": false,
@@ -756,7 +786,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001485.000017557.html",
           "sourceListedDate": "2026-07-27",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -768,7 +798,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-27",
       "bodyVerified": false,
       "autoPublish": false,
@@ -777,7 +807,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001486.000017557.html",
           "sourceListedDate": "2026-07-27",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -789,7 +819,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "A",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-22",
       "bodyVerified": false,
       "autoPublish": false,
@@ -798,7 +828,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001479.000017557.html",
           "sourceListedDate": "2026-07-22",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -875,7 +905,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "B",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-22",
       "bodyVerified": false,
       "autoPublish": false,
@@ -884,7 +914,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001558.000017557.html",
           "sourceListedDate": "2026-10-22",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -896,7 +926,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "B",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-22",
       "bodyVerified": false,
       "autoPublish": false,
@@ -905,7 +935,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001555.000017557.html",
           "sourceListedDate": "2026-10-22",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -917,7 +947,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "B",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-09",
       "bodyVerified": false,
       "autoPublish": false,
@@ -926,7 +956,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001522.000017557.html",
           "sourceListedDate": "2026-09-09",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -938,7 +968,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "B",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-04",
       "bodyVerified": false,
       "autoPublish": false,
@@ -947,7 +977,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001519.000017557.html",
           "sourceListedDate": "2026-09-04",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -959,7 +989,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "B",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-03",
       "bodyVerified": false,
       "autoPublish": false,
@@ -968,7 +998,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001515.000017557.html",
           "sourceListedDate": "2026-09-03",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -980,7 +1010,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "B",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-21",
       "bodyVerified": false,
       "autoPublish": false,
@@ -989,7 +1019,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001503.000017557.html",
           "sourceListedDate": "2026-08-21",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1001,7 +1031,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "B",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-06",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1010,7 +1040,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001495.000017557.html",
           "sourceListedDate": "2026-08-06",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1022,7 +1052,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "B",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-24",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1031,10 +1061,23 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001482.000017557.html",
           "sourceListedDate": "2026-07-24",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
+    },
+    {
+      "id": "6e170adca31a6f820fd0",
+      "title": "2026/10/28 【お知らせ】各駅物販店舗及びジオラマ京都JAPAN 11月の営業について",
+      "url": "https://www.sagano-kanko.co.jp/news/5716/",
+      "sourceId": "sagano",
+      "priority": "B",
+      "firstSeenAt": "2026-10-28T01:08:20+00:00",
+      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "sourceListedDate": "2026-10-28",
+      "bodyVerified": false,
+      "autoPublish": false,
+      "reason": "stale-or-unavailable-source; direct official retrieval required"
     },
     {
       "id": "40ef82383e2916000386",
@@ -1069,7 +1112,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-27",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1078,7 +1121,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001562.000017557.html",
           "sourceListedDate": "2026-10-27",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -1100,7 +1143,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-27",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1109,7 +1152,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001554.000017557.html",
           "sourceListedDate": "2026-10-27",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -1131,7 +1174,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-19",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1140,7 +1183,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001552.000017557.html",
           "sourceListedDate": "2026-10-19",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1152,7 +1195,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-16",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1161,7 +1204,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001551.000017557.html",
           "sourceListedDate": "2026-10-16",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1173,7 +1216,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-15",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1182,7 +1225,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001550.000017557.html",
           "sourceListedDate": "2026-10-15",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1194,7 +1237,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-13",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1203,7 +1246,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001549.000017557.html",
           "sourceListedDate": "2026-10-13",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1215,7 +1258,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-08",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1224,7 +1267,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001548.000017557.html",
           "sourceListedDate": "2026-10-08",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1236,7 +1279,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-08",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1245,7 +1288,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001547.000017557.html",
           "sourceListedDate": "2026-10-08",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1257,7 +1300,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-08",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1266,7 +1309,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001546.000017557.html",
           "sourceListedDate": "2026-10-08",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1278,7 +1321,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-07",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1287,7 +1330,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001545.000017557.html",
           "sourceListedDate": "2026-10-07",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1299,7 +1342,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-06",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1308,7 +1351,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001544.000017557.html",
           "sourceListedDate": "2026-10-06",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1320,7 +1363,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-06",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1329,7 +1372,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001542.000017557.html",
           "sourceListedDate": "2026-10-06",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1341,7 +1384,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-06",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1350,7 +1393,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001543.000017557.html",
           "sourceListedDate": "2026-10-06",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1362,7 +1405,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-01",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1371,7 +1414,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001540.000017557.html",
           "sourceListedDate": "2026-10-01",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1383,7 +1426,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-01",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1392,7 +1435,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001538.000017557.html",
           "sourceListedDate": "2026-10-01",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1404,7 +1447,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-30",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1413,7 +1456,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001537.000017557.html",
           "sourceListedDate": "2026-09-30",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1425,7 +1468,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-29",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1434,7 +1477,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001535.000017557.html",
           "sourceListedDate": "2026-09-29",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1446,7 +1489,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-25",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1455,7 +1498,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001530.000017557.html",
           "sourceListedDate": "2026-09-25",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1467,7 +1510,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-24",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1476,7 +1519,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001528.000017557.html",
           "sourceListedDate": "2026-09-24",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1488,7 +1531,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-18",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1497,7 +1540,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001527.000017557.html",
           "sourceListedDate": "2026-09-18",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1509,7 +1552,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-17",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1518,7 +1561,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001526.000017557.html",
           "sourceListedDate": "2026-09-17",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1530,7 +1573,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-17",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1539,7 +1582,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001525.000017557.html",
           "sourceListedDate": "2026-09-17",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1551,7 +1594,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-16",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1560,7 +1603,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001524.000017557.html",
           "sourceListedDate": "2026-09-16",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1572,7 +1615,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-10",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1581,7 +1624,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001523.000017557.html",
           "sourceListedDate": "2026-09-10",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1593,7 +1636,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-08",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1602,7 +1645,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001521.000017557.html",
           "sourceListedDate": "2026-09-08",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1614,7 +1657,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-08",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1623,7 +1666,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001520.000017557.html",
           "sourceListedDate": "2026-09-08",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1635,7 +1678,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-03",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1644,7 +1687,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001517.000017557.html",
           "sourceListedDate": "2026-09-03",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1656,7 +1699,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-03",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1665,7 +1708,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001516.000017557.html",
           "sourceListedDate": "2026-09-03",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1677,7 +1720,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-02",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1686,7 +1729,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001514.000017557.html",
           "sourceListedDate": "2026-09-02",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1698,7 +1741,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-09-01",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1707,7 +1750,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001513.000017557.html",
           "sourceListedDate": "2026-09-01",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1719,7 +1762,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-28",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1728,7 +1771,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001511.000017557.html",
           "sourceListedDate": "2026-08-28",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1740,7 +1783,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-28",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1749,7 +1792,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001510.000017557.html",
           "sourceListedDate": "2026-08-28",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1761,7 +1804,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-25",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1770,7 +1813,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001507.000017557.html",
           "sourceListedDate": "2026-08-25",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1782,7 +1825,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-18",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1791,7 +1834,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001501.000017557.html",
           "sourceListedDate": "2026-08-18",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1803,7 +1846,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-24",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1812,7 +1855,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001505.000017557.html",
           "sourceListedDate": "2026-08-24",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1824,7 +1867,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-19",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1833,7 +1876,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001502.000017557.html",
           "sourceListedDate": "2026-08-19",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1845,7 +1888,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-18",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1854,7 +1897,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001500.000017557.html",
           "sourceListedDate": "2026-08-18",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1866,7 +1909,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-17",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1875,7 +1918,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001498.000017557.html",
           "sourceListedDate": "2026-08-17",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1887,7 +1930,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-07",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1896,7 +1939,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001497.000017557.html",
           "sourceListedDate": "2026-08-07",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1908,7 +1951,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-08-05",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1917,7 +1960,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001493.000017557.html",
           "sourceListedDate": "2026-08-05",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1929,7 +1972,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-30",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1938,7 +1981,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001490.000017557.html",
           "sourceListedDate": "2026-07-30",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1950,7 +1993,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-30",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1959,7 +2002,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001491.000017557.html",
           "sourceListedDate": "2026-07-30",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1971,7 +2014,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-29",
       "bodyVerified": false,
       "autoPublish": false,
@@ -1980,7 +2023,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001489.000017557.html",
           "sourceListedDate": "2026-07-29",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -1992,7 +2035,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-29",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2001,7 +2044,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001488.000017557.html",
           "sourceListedDate": "2026-07-29",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -2013,7 +2056,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-28",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2022,7 +2065,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001487.000017557.html",
           "sourceListedDate": "2026-07-28",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -2034,7 +2077,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-27",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2043,7 +2086,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001484.000017557.html",
           "sourceListedDate": "2026-07-27",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -2055,7 +2098,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-27",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2064,7 +2107,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001483.000017557.html",
           "sourceListedDate": "2026-07-27",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -2076,7 +2119,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-23",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2085,7 +2128,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001481.000017557.html",
           "sourceListedDate": "2026-07-23",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -2097,7 +2140,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-22",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2106,7 +2149,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001480.000017557.html",
           "sourceListedDate": "2026-07-22",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -2118,7 +2161,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-21",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2127,7 +2170,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001478.000017557.html",
           "sourceListedDate": "2026-07-21",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -2139,7 +2182,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-14",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2148,7 +2191,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001472.000017557.html",
           "sourceListedDate": "2026-07-14",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -2160,7 +2203,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-10-29T15:58:07+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-07-17",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2169,7 +2212,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001477.000017557.html",
           "sourceListedDate": "2026-07-17",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "reason": "old-listed-item; rediscovery is not a new announcement"
@@ -2181,7 +2224,7 @@
       "sourceId": "sagano",
       "priority": "C",
       "firstSeenAt": "2026-10-30T01:08:55+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-10-30",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2190,7 +2233,7 @@
           "sourceId": "sagano",
           "url": "https://www.sagano-kanko.co.jp/news/5736/",
           "sourceListedDate": "2026-10-30",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2212,7 +2255,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-11-04T07:27:22+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-04",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2221,7 +2264,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001563.000017557.html",
           "sourceListedDate": "2026-11-04",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2243,7 +2286,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-11-05T07:28:52+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-05",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2252,7 +2295,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001565.000017557.html",
           "sourceListedDate": "2026-11-05",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2274,7 +2317,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-11-10T10:01:48+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-10",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2283,7 +2326,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001569.000017557.html",
           "sourceListedDate": "2026-11-10",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2305,7 +2348,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-11-10T10:01:48+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-10",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2314,7 +2357,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001568.000017557.html",
           "sourceListedDate": "2026-11-10",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2336,7 +2379,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-11-10T13:13:35+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-10",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2345,7 +2388,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001570.000017557.html",
           "sourceListedDate": "2026-11-10",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2367,7 +2410,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-11-13T07:26:59+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-13",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2376,7 +2419,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001573.000017557.html",
           "sourceListedDate": "2026-11-13",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2398,7 +2441,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-11-13T07:26:59+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-13",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2407,7 +2450,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001572.000017557.html",
           "sourceListedDate": "2026-11-13",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2429,7 +2472,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-11-16T06:27:50+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-16",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2438,7 +2481,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001574.000017557.html",
           "sourceListedDate": "2026-11-16",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2460,7 +2503,7 @@
       "sourceId": "sagano",
       "priority": "C",
       "firstSeenAt": "2026-11-17T15:59:00+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-17",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2469,7 +2512,7 @@
           "sourceId": "sagano",
           "url": "https://www.sagano-kanko.co.jp/news/6040/",
           "sourceListedDate": "2026-11-17",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2491,7 +2534,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-11-18T11:41:31+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-18",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2500,7 +2543,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001575.000017557.html",
           "sourceListedDate": "2026-11-18",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2522,7 +2565,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-11-20T11:38:41+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-20",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2531,7 +2574,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001577.000017557.html",
           "sourceListedDate": "2026-11-20",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2553,7 +2596,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-11-24T13:42:12+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-24",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2562,7 +2605,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001580.000017557.html",
           "sourceListedDate": "2026-11-24",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2584,7 +2627,7 @@
       "sourceId": "jr-east-prtimes",
       "priority": "C",
       "firstSeenAt": "2026-11-24T13:42:12+00:00",
-      "lastSeenAt": "2026-11-24T23:53:33+00:00",
+      "lastSeenAt": "2026-11-25T08:32:51+00:00",
       "sourceListedDate": "2026-11-24",
       "bodyVerified": false,
       "autoPublish": false,
@@ -2593,7 +2636,7 @@
           "sourceId": "jr-east-prtimes",
           "url": "https://prtimes.jp/main/html/rd/p/000001578.000017557.html",
           "sourceListedDate": "2026-11-24",
-          "lastSeenAt": "2026-11-24T23:53:33+00:00"
+          "lastSeenAt": "2026-11-25T08:32:51+00:00"
         }
       ],
       "requiredChecks": [
@@ -2792,10 +2835,10 @@
     }
   ],
   "counts": {
-    "candidates": 127,
-    "actionable": 10,
+    "candidates": 129,
+    "actionable": 11,
     "alreadyCovered": 1,
-    "held": 116
+    "held": 117
   },
   "publication": {
     "requiresAgentReview": true,
