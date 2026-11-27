@@ -1,6 +1,7 @@
 [
   {
     "id": "suica-charge-202611",
+    "audience": "対象のSuicaチャージや買いものへのエントリーを検討する人",
     "category": "お得・暮らし",
     "priority": "A",
     "title": "Suicaチャージの新キャンペーン。エントリー日と利用開始日を分けて確認",
@@ -61,6 +62,7 @@
   },
   {
     "id": "sagano-new-train-202703",
+    "audience": "嵯峨野トロッコの新型列車を予約する人",
     "category": "鉄道・旅行",
     "priority": "A",
     "title": "嵯峨野トロッコ新型、2027年3月1日へ。初日の予約時刻と料金を整理",
@@ -121,6 +123,7 @@
   },
   {
     "id": "jr-east-winter-2026",
+    "audience": "帰省やスキーでJR東日本の冬の臨時列車を利用する人",
     "category": "交通",
     "priority": "B",
     "title": "JR東日本、冬の臨時列車を発表。帰省・スキーの計画前に見る3項目",
